@@ -42,13 +42,23 @@
             font-feature-settings: "kern", "liga";
             -webkit-font-smoothing: antialiased;
         }
+        
         .hero-bg {
-            /* Hier später ein echtes, edles Hintergrundbild einfügen */
+            /* DEIN BILD: teaser2.jpg */
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('teaser2.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax Effekt */
+            /* WICHTIG FÜR MOBILE: Standard ist scroll, damit es auf Android nicht zoomt */
+            background-attachment: scroll; 
         }
+
+        /* Nur auf Desktop (ab 768px) wird der Parallax-Effekt (fixed) aktiviert */
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-attachment: fixed;
+            }
+        }
+
         .text-shadow {
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
@@ -99,10 +109,12 @@
 
     <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 transition-all duration-300">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl tracking-wide uppercase hover:text-mag-gold transition-colors">
+        <div class="container mx-auto px-6 flex justify-between items-center relative">
+            <a href="#" class="font-serif text-2xl tracking-wide uppercase hover:text-mag-gold transition-colors z-50 relative">
                 Hochzeitsmagazin <span class="text-mag-gold">Rostock</span>
             </a>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-600">
                 <a href="#editorial" class="hover:text-mag-gold transition-colors">Editorial</a>
                 <a href="#inhalt" class="hover:text-mag-gold transition-colors">Inhalt</a>
@@ -110,10 +122,20 @@
                 <a href="#ueber-uns" class="hover:text-mag-gold transition-colors">Herausgeberin</a>
                 <a href="#kontakt" class="hover:text-mag-gold transition-colors">Kontakt</a>
             </div>
+
             <!-- Mobile Menu Button (Symbol) -->
-            <button class="md:hidden text-2xl text-mag-black">
-                <i class="fa-solid fa-bars"></i>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-mag-black z-50 relative focus:outline-none">
+                <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
             </button>
+
+            <!-- Mobile Menu Dropdown (NEU EINGEFÜGT FÜR IPHONE/ANDROID) -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl flex-col md:hidden">
+                <a href="#editorial" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Editorial</a>
+                <a href="#inhalt" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Inhalt</a>
+                <a href="#mediadaten" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Partner werden</a>
+                <a href="#ueber-uns" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Herausgeberin</a>
+                <a href="#kontakt" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 mobile-link">Kontakt</a>
+            </div>
         </div>
     </nav>
 
@@ -250,7 +272,7 @@
             <!-- Bild -->
             <div class="w-full md:w-5/12">
                 <div class="relative p-4 border border-gray-200">
-                    <!-- Platzhalterbild für Katrin -->
+                    <!-- DEIN BILD: Katrin -->
                     <img src="Katrin_Witt_Martens_Hochzeitsmagazin_in_Rostock.png" alt="Katrin Witt-Martens" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
                     <div class="absolute -bottom-4 -right-4 bg-white p-4 shadow-lg hidden md:block">
                         <p class="font-serif text-xl italic text-mag-black">Seit 2007</p>
@@ -527,6 +549,7 @@
                     <!-- Holger -->
                     <div class="text-center md:text-left">
                         <div class="mb-6 overflow-hidden shadow-sm">
+                            <!-- DEIN BILD: Holger -->
                             <img src="holger_martens_Hochzeitsfotograf_in_Rostock.png" alt="Holger Martens" class="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
                         </div>
                         <h3 class="font-serif text-2xl text-mag-black mb-1">Holger Martens</h3>
@@ -544,6 +567,7 @@
                     <!-- Katrin -->
                     <div class="text-center md:text-left">
                          <div class="mb-6 overflow-hidden shadow-sm">
+                            <!-- DEIN BILD: Katrin -->
                             <img src="Katrin_Witt_Martens_Hochzeitsmagazin_in_Rostock.png" alt="Katrin Witt-Martens" class="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
                         </div>
                         <h3 class="font-serif text-2xl text-mag-black mb-1">Katrin Witt-Martens</h3>
@@ -892,23 +916,21 @@
 
     <!-- SCRIPT -->
     <script>
+        // Modal Logic
         function toggleModal(modalID) {
             const modal = document.getElementById(modalID);
             const body = document.body;
             
             if (modal.classList.contains('active')) {
                 modal.classList.remove('active');
-                setTimeout(() => {
-                    // Warten bis opacity transition fertig ist
-                }, 300);
-                body.style.overflow = 'auto'; // Scrollen wieder erlauben
+                body.style.overflow = 'auto'; // Enable scrolling
             } else {
                 modal.classList.add('active');
-                body.style.overflow = 'hidden'; // Scrollen verhindern
+                body.style.overflow = 'hidden'; // Prevent scrolling
             }
         }
 
-        // Schließen mit ESC Taste
+        // Close Modals on ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 const modals = document.querySelectorAll('.modal.active');
@@ -917,6 +939,38 @@
                 });
             }
         });
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('mobile-menu-icon');
+        const links = document.querySelectorAll('.mobile-link'); // Select all links inside mobile menu
+
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex'); // Use flex for layout when visible
+                
+                // Toggle Icon
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
     </script>
 </body>
 </html>
