@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hochzeitsmagazin Rostock - Der elegante Wegweiser für Ihre Traumhochzeit an der Ostsee. Herausgegeben von Katrin Witt-Martens.">
+    <title>Hochzeitsmagazin Rostock | Katrin Witt-Martens</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Lato (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (für schnelles Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config für Farben und Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mag-black': '#1a1a1a',
+                        'mag-gold': '#d4af37',
+                        'mag-grey': '#f9f9f9',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Zusätzliche feine Anpassungen */
+        body {
+            font-feature-settings: "kern", "liga";
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-bg {
+            /* Hier später ein echtes, edles Hintergrundbild einfügen */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('teaser2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax Effekt */
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* Modal Animationen */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        /* Legal Text Styling */
+        .legal-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1a1a1a;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .legal-text h4 {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #4a4a4a;
+        }
+        .legal-text p {
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-white text-mag-black font-sans leading-relaxed">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl tracking-wide uppercase hover:text-mag-gold transition-colors">
+                Hochzeitsmagazin <span class="text-mag-gold">Rostock</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-600">
+                <a href="#editorial" class="hover:text-mag-gold transition-colors">Editorial</a>
+                <a href="#inhalt" class="hover:text-mag-gold transition-colors">Inhalt</a>
+                <a href="#mediadaten" class="hover:text-mag-gold transition-colors">Partner werden</a>
+                <a href="#ueber-uns" class="hover:text-mag-gold transition-colors">Herausgeberin</a>
+                <a href="#kontakt" class="hover:text-mag-gold transition-colors">Kontakt</a>
+            </div>
+            <!-- Mobile Menu Button (Symbol) -->
+            <button class="md:hidden text-2xl text-mag-black">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="relative z-10 text-white max-w-4xl">
+            <p class="text-sm md:text-lg uppercase tracking-[0.3em] mb-4 text-shadow">Das Magazin für Rostock & Umgebung</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 text-shadow">Ja, ich will.</h1>
+            <p class="font-serif italic text-xl md:text-2xl mb-10 text-shadow">Ihr Begleiter für den schönsten Tag an der Ostsee.</p>
+            <a href="#editorial" class="inline-block border border-white text-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-mag-black transition-all duration-300">
+                Magazin entdecken
+            </a>
+        </div>
+    </header>
+
+    <!-- EDITORIAL -->
+    <section id="editorial" class="py-20 md:py-32 container mx-auto px-6 max-w-4xl text-center">
+        <span class="text-mag-gold text-4xl mb-4 block"><i class="fa-solid fa-quote-left"></i></span>
+        <h2 class="font-serif text-3xl md:text-4xl mb-8">Liebe zukünftige Brautpaare,</h2>
+        <div class="prose prose-lg mx-auto text-gray-600">
+            <p class="mb-6">
+                Herzlichen Glückwunsch zu eurer Verlobung! Die Planung einer Hochzeit ist eine Reise voller Emotionen, Vorfreude und manchmal auch vielen Fragen. Mit unserem <strong>Hochzeitsmagazin Rostock</strong> möchten wir euch an die Hand nehmen.
+            </p>
+            <p class="mb-6">
+                Wir erscheinen einmal im Jahr und unser Magazin wird direkt auf der <strong>Rostocker Hochzeitsmesse</strong> an alle Interessierten verteilt. Aber wir sind mehr als nur Papier: Wir geben euch wertvolle Insidertipps für eure Planung und vernetzen euch mit den besten regionalen Anbietern – von der traumhaften Location am Meer bis zum perfekten Ring.
+            </p>
+            <p>
+                Lasst uns diesen Weg gemeinsam gehen.
+            </p>
+        </div>
+        <div class="mt-8 font-serif italic text-xl text-mag-black">– Eure Katrin Witt-Martens</div>
+    </section>
+
+    <!-- INHALT / KATEGORIEN -->
+    <section id="inhalt" class="bg-mag-grey py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl mb-4">Inhalt & Inspiration</h2>
+                <div class="w-24 h-1 bg-mag-gold mx-auto"></div>
+                <p class="mt-4 text-gray-500 uppercase tracking-widest text-sm">Was euch erwartet</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: LOCATIONS (KLICKBAR) -->
+                <div onclick="toggleModal('locationModal')" class="bg-white p-10 text-center shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative overflow-hidden border-b-4 border-transparent hover:border-mag-gold">
+                    <div class="absolute top-2 right-2 text-mag-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <div class="text-mag-gold text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Locations</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        Von märchenhaften Schlössern und Gutshäusern bis hin zu modernen Lofts in Rostock.
+                    </p>
+                    <span class="text-xs uppercase tracking-widest text-mag-black font-bold border-b border-mag-black pb-1">Liste ansehen</span>
+                </div>
+
+                <!-- Card 2: STYLING (KLICKBAR) -->
+                <div onclick="toggleModal('stylingModal')" class="bg-white p-10 text-center shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative overflow-hidden border-b-4 border-transparent hover:border-mag-gold">
+                    <div class="absolute top-2 right-2 text-mag-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <div class="text-mag-gold text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Styling</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        Die besten Friseure, Visagisten und Brautausstatter für den perfekten Look.
+                    </p>
+                     <span class="text-xs uppercase tracking-widest text-mag-black font-bold border-b border-mag-black pb-1">Partner: HCT Rostock</span>
+                </div>
+
+                <!-- Card 3: FOTOGRAFIE (KLICKBAR) -->
+                <div onclick="toggleModal('fotoModal')" class="bg-white p-10 text-center shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative overflow-hidden border-b-4 border-transparent hover:border-mag-gold">
+                    <div class="absolute top-2 right-2 text-mag-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <div class="text-mag-gold text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Fotografie</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        Emotionale Momente für die Ewigkeit festgehalten von Profis aus der Region.
+                    </p>
+                    <span class="text-xs uppercase tracking-widest text-mag-black font-bold border-b border-mag-black pb-1">Martens & Martens</span>
+                </div>
+
+                <!-- Card 4: JUWELIER (KLICKBAR - NEU) -->
+                <div onclick="toggleModal('juwelierModal')" class="bg-white p-10 text-center shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative overflow-hidden border-b-4 border-transparent hover:border-mag-gold">
+                    <div class="absolute top-2 right-2 text-mag-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <div class="text-mag-gold text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-regular fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Juwelier</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        Trauringe und Schmuckstücke, die eure Verbindung symbolisieren.
+                    </p>
+                    <span class="text-xs uppercase tracking-widest text-mag-black font-bold border-b border-mag-black pb-1">Partner: Juwelier Zeitlos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIADATEN & WERBUNG -->
+    <section id="mediadaten" class="py-20 container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center bg-mag-black text-white overflow-hidden rounded-sm">
+            <div class="w-full md:w-1/2 p-12 md:p-16">
+                <span class="text-mag-gold uppercase tracking-widest text-xs font-bold mb-2 block">Für Dienstleister</span>
+                <h2 class="font-serif text-3xl md:text-4xl mb-6">Werben im Magazin</h2>
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    Sie sind regionaler Anbieter in der Hochzeitsbranche? Nutzen Sie die Chance, sich direkt unserer Zielgruppe zu präsentieren. Unser Magazin ist der direkte Draht zu den Brautpaaren der Region.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="mediadaten_hochzeitsmagazin 2026.pdf" target="_blank" class="inline-block bg-mag-gold text-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-mag-black transition-all duration-300 text-center">
+                        <i class="fa-solid fa-download mr-2"></i> Mediadaten
+                    </a>
+                    <a href="mailto:kontakt@die-kleinen-rostocker.de" class="inline-block border border-white text-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-mag-black transition-all duration-300 text-center">
+                        Anfrage senden
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-full min-h-[400px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551636282-4ccb03362a79?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                <!-- Bild Platzhalter für Magazin Mockup -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ÜBER DIE HERAUSGEBERIN -->
+    <section id="ueber-uns" class="py-20 md:py-32 container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <!-- Bild -->
+            <div class="w-full md:w-5/12">
+                <div class="relative p-4 border border-gray-200">
+                    <!-- Platzhalterbild für Katrin -->
+                    <img src="Katrin_Witt_Martens_Hochzeitsmagazin_in_Rostock.png" alt="Katrin Witt-Martens" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 shadow-lg hidden md:block">
+                        <p class="font-serif text-xl italic text-mag-black">Seit 2007</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text -->
+            <div class="w-full md:w-7/12">
+                <h2 class="font-serif text-3xl md:text-5xl mb-6">Die Macherin dahinter</h2>
+                <h3 class="text-mag-gold uppercase tracking-widest text-sm font-bold mb-6">Katrin Witt-Martens – Herausgeberin & Fotografin</h3>
+                
+                <div class="prose prose-lg text-gray-600">
+                    <p>
+                        Das Hochzeitsmagazin Rostock ist für mich mehr als nur eine Publikation – es ist Herzblut. Seit 2007 bewege ich mich auf den Hochzeitsmessen und in der Branche. Als langjährige <strong>Hochzeitsfotografin</strong> habe ich unzählige Paare begleitet und kenne die Szene wie kaum jemand sonst.
+                    </p>
+                    <p>
+                        Ich kenne die schönsten Locations, die zuverlässigsten Floristen, die besten Friseure und die Brautausstatter, bei denen Träume wahr werden. Ich sehe mich als eure Insiderin, die euch die Tipps gibt, die man sonst mühsam suchen müsste – quasi euer kleiner Weddingplaner im Taschenformat.
+                    </p>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-gray-100 flex items-center justify-between">
+                   <div>
+                       <span class="block text-xs uppercase tracking-widest text-gray-400">Dachmarke</span>
+                       <a href="https://www.die-kleinen-rostocker.de" target="_blank" class="text-mag-black font-serif text-lg hover:text-mag-gold transition-colors">
+                           Die kleinen Rostocker
+                       </a>
+                   </div>
+                   <!-- Signatur Platzhalter -->
+                   <div class="font-serif text-4xl text-gray-300 italic">K. Witt-Martens</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHIV / DOWNLOADS -->
+    <section class="bg-mag-grey py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl mb-8">Magazine der letzten Jahre</h2>
+            <p class="text-gray-500 mb-10 max-w-2xl mx-auto">Lassen Sie sich von unseren vergangenen Ausgaben inspirieren. Alle Ausgaben stehen als PDF zum kostenlosen Download bereit.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.die-kleinen-rostocker.de/_files/ugd/d828d0_0434cad594124206bfde546dc52c83b8.pdf" target="_blank" class="bg-white border border-gray-200 px-6 py-4 hover:border-mag-gold hover:text-mag-gold transition-all duration-300 shadow-sm min-w-[140px]">
+                    <span class="block font-serif text-xl font-bold">2025</span>
+                    <span class="text-xs text-gray-400 uppercase">Download</span>
+                </a>
+                <a href="https://www.die-kleinen-rostocker.de/_files/ugd/d828d0_c505d7abaa9d426e9cab08009880e180.pdf" target="_blank" class="bg-white border border-gray-200 px-6 py-4 hover:border-mag-gold hover:text-mag-gold transition-all duration-300 shadow-sm min-w-[140px]">
+                    <span class="block font-serif text-xl font-bold">2024</span>
+                    <span class="text-xs text-gray-400 uppercase">Download</span>
+                </a>
+                <a href="https://www.die-kleinen-rostocker.de/_files/ugd/d828d0_e47383407ceb4183b7c54f9d2d409e49.pdf" target="_blank" class="bg-white border border-gray-200 px-6 py-4 hover:border-mag-gold hover:text-mag-gold transition-all duration-300 shadow-sm min-w-[140px]">
+                    <span class="block font-serif text-xl font-bold">2023</span>
+                    <span class="text-xs text-gray-400 uppercase">Download</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKTFORMULAR -->
+    <section id="kontakt" class="py-20 container mx-auto px-6 max-w-4xl border-t border-gray-200">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl md:text-5xl mb-4">Kontaktieren Sie uns</h2>
+            <div class="w-24 h-1 bg-mag-gold mx-auto"></div>
+            <p class="mt-4 text-gray-500">Wir freuen uns auf Ihre Nachricht.</p>
+        </div>
+
+        <form action="https://formsubmit.co/info@die-kleinen-rostocker.de" method="POST" class="space-y-6">
+            <!-- Formsubmit Configuration -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Neue Anfrage über Hochzeitsmagazin Rostock">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="vorname" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Vorname</label>
+                    <input type="text" name="vorname" id="vorname" required class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm">
+                </div>
+                <div>
+                    <label for="nachname" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Name</label>
+                    <input type="text" name="nachname" id="nachname" required class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="email" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">E-Mail Adresse</label>
+                    <input type="email" name="email" id="email" required class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm">
+                </div>
+                <div>
+                    <label for="telefon" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Telefonnummer</label>
+                    <input type="tel" name="telefon" id="telefon" class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm">
+                </div>
+            </div>
+
+            <div>
+                <label for="unternehmen" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Unternehmen (Optional)</label>
+                <input type="text" name="unternehmen" id="unternehmen" class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm">
+            </div>
+
+            <div>
+                <label for="nachricht" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Ihre Nachricht</label>
+                <textarea name="nachricht" id="nachricht" rows="5" required class="w-full border border-gray-300 p-3 focus:border-mag-gold focus:outline-none transition-colors rounded-sm"></textarea>
+            </div>
+
+            <div class="text-center mt-8">
+                <button type="submit" class="inline-block bg-mag-black text-white px-12 py-4 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300 shadow-lg cursor-pointer">
+                    Nachricht absenden
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer-info" class="bg-mag-black text-white pt-20 pb-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            
+            <!-- Kontakt -->
+            <div>
+                <h4 class="font-serif text-2xl mb-6">Kontakt</h4>
+                <p class="text-gray-400 mb-2">Hochzeitsmagazin Rostock</p>
+                <p class="text-gray-400 mb-2">c/o Die kleinen Rostocker</p>
+                <p class="text-gray-400 mb-6">Katrin Witt-Martens</p>
+                <a href="mailto:kontakt@die-kleinen-rostocker.de" class="text-mag-gold hover:text-white transition-colors">kontakt@die-kleinen-rostocker.de</a>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h4 class="font-serif text-2xl mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="https://www.die-kleinen-rostocker.de" class="hover:text-mag-gold transition-colors">Die kleinen Rostocker</a></li>
+                    <li><a href="#mediadaten" class="hover:text-mag-gold transition-colors">Werben</a></li>
+                    <li><a href="#" onclick="toggleModal('impressumModal'); return false;" class="hover:text-mag-gold transition-colors">Impressum</a></li>
+                    <li><a href="#" onclick="toggleModal('datenschutzModal'); return false;" class="hover:text-mag-gold transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+
+            <!-- Social / Info -->
+            <div>
+                <h4 class="font-serif text-2xl mb-6">Über uns</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Das regionale Magazin für Rostock und Umgebung. Verteilt auf der Rostocker Hochzeitsmesse und online verfügbar.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-mag-gold hover:border-mag-gold transition-all duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-mag-gold hover:border-mag-gold transition-all duration-300">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs tracking-widest uppercase">
+            &copy; 2026 Hochzeitsmagazin Rostock. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <!-- MODAL: LOCATION LISTE -->
+    <div id="locationModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('locationModal')"></div>
+        
+        <!-- Content -->
+        <div class="modal-content relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <!-- Header Modal -->
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <h2 class="font-serif text-2xl md:text-3xl text-mag-black">Unsere Top-Locations</h2>
+                <button onclick="toggleModal('locationModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Body Modal -->
+            <div class="p-8 md:p-12 bg-mag-grey/30">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <!-- Spalte 1: Amtlich & Maritim -->
+                    <div class="space-y-10">
+                        <!-- Standesämter -->
+                        <div>
+                            <h3 class="font-serif text-xl text-mag-gold mb-4 border-b border-mag-gold/30 pb-2">Standesämter & öffentliche Trauorte</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><a href="https://www.rostock.de/leben-wohnen/heiraten.html" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-angle-right text-mag-gold mr-2"></i> Standesamt Rostock</a></li>
+                                <li><a href="https://www.stadt-kuehlungsborn.de/verwaltung/standesamt.html" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-angle-right text-mag-gold mr-2"></i> Standesamt Kühlungsborn</a></li>
+                                <li><a href="https://www.wismar.de/B%C3%BCrger/B%C3%BCrgerservice/Standesamt" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-angle-right text-mag-gold mr-2"></i> Standesamt Wismar</a></li>
+                                <li><a href="https://bad-doberan-heiligendamm.de/aemter/standesamt.html" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-angle-right text-mag-gold mr-2"></i> Standesamt Bad Doberan – Heiligendamm</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/orte-fuer-trauungen" target="_blank" class="font-bold text-mag-black mt-2 inline-block">Alle Trauorte in der Übersicht &rarr;</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Maritim & Hotels -->
+                        <div>
+                            <h3 class="font-serif text-xl text-mag-gold mb-4 border-b border-mag-gold/30 pb-2">Hotels, Kurhäuser & maritime Locations</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><a href="https://www.hohe-duene.de/" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Yachthafenresidenz Hohe Düne</a></li>
+                                <li><a href="https://kurhaus-warnemuende.de/location/hochzeit" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Kurhaus Warnemünde</a></li>
+                                <li><a href="https://www.grandhotel-heiligendamm.de/tagen-feiern/private/hochzeiten/" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Grand Hotel Heiligendamm</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/hotel-neptun" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Hotel Neptun, Warnemünde</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/hotel-huebner" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Hotel Hübner, Warnemünde</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/teepott-warnemuende" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Teepott Warnemünde</a></li>
+                                <li><a href="https://blaue-boje.de/ihre-feier/" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-water text-mag-gold mr-2"></i> Blaue Boje, Warnemünde</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Spalte 2: Schlösser & Besonderes -->
+                    <div class="space-y-10">
+                        <!-- Schlösser -->
+                        <div>
+                            <h3 class="font-serif text-xl text-mag-gold mb-4 border-b border-mag-gold/30 pb-2">Schlösser, Herrenhäuser & Gutsanlagen</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><a href="https://www.jagdschloss-gelbensande.de/hochzeiten-1/" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Jagdschloss Gelbensande</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/gut-gerdshagen" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Gut Gerdshagen</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/herrenhaus-samow" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Herrenhaus Samow</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/schloss-gamehl" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Schloss Gamehl</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/gut-nustrow" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Gut Nustrow</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/schloss-frauenmark" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Schloss Frauenmark</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/schlossgut-schwansee" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-brands fa-fort-awesome text-mag-gold mr-2"></i> Schlossgut Schwansee</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Ländlich & Inseln -->
+                        <div>
+                            <h3 class="font-serif text-xl text-mag-gold mb-4 border-b border-mag-gold/30 pb-2">Ländlich, Inseln & Besonderes</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/kuestenmuehle-rostock" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-leaf text-mag-gold mr-2"></i> Küstenmühle Rostock</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/van-der-valk-drewitz" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-leaf text-mag-gold mr-2"></i> Van der Valk Resort Drewitz</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/hiddensee" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-umbrella-beach text-mag-gold mr-2"></i> Insel Hiddensee</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/ruegen" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-umbrella-beach text-mag-gold mr-2"></i> Insel Rügen</a></li>
+                                <li><a href="https://www.hochzeitsfoto-rostock.de/schwerin" target="_blank" class="hover:text-mag-black transition-colors flex items-center"><i class="fa-solid fa-city text-mag-gold mr-2"></i> Schwerin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Modal -->
+            <div class="bg-gray-50 p-6 text-center border-t border-gray-100">
+                <p class="text-xs text-gray-500 mb-2">Mehr Inspiration gefällig?</p>
+                <a href="https://www.hochzeitsfoto-rostock.de/ihre-hochzeitslocation" target="_blank" class="inline-block bg-mag-black text-white px-6 py-2 text-xs uppercase tracking-widest hover:bg-mag-gold transition-colors">
+                    Zur großen Location-Übersicht
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: FOTOGRAFIE (Martens & Martens) -->
+    <div id="fotoModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('fotoModal')"></div>
+        
+        <!-- Content -->
+        <div class="modal-content relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <!-- Header Modal -->
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <div>
+                    <h2 class="font-serif text-2xl md:text-3xl text-mag-black">Martens & Martens</h2>
+                    <p class="text-xs uppercase tracking-widest text-mag-gold">Eure Hochzeitsfotografen in Rostock</p>
+                </div>
+                <button onclick="toggleModal('fotoModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Body Modal -->
+            <div class="p-8 md:p-12 bg-white">
+                <p class="text-center text-gray-600 italic font-serif text-xl mb-12 max-w-3xl mx-auto">
+                    "Gemeinsam sind wir ein Team – aus Leidenschaft und Liebe zur Fotografie. Wir dokumentieren Hochzeiten in ganz Mecklenburg-Vorpommern."
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                    
+                    <!-- Holger -->
+                    <div class="text-center md:text-left">
+                        <div class="mb-6 overflow-hidden shadow-sm">
+                            <img src="holger_martens_Hochzeitsfotograf_in_Rostock.png" alt="Holger Martens" class="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl text-mag-black mb-1">Holger Martens</h3>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Hochzeitsfotograf & Küstenkind</p>
+                        <div class="prose text-gray-600 text-sm leading-relaxed">
+                            <p class="mb-4">
+                                Seit mehr als 20 Jahren ist die Kamera mein ständiger Begleiter. Ich habe mich der <strong>kreativen Hochzeitsreportage</strong> verschrieben. Mein Anspruch: ehrliche, authentische Momente.
+                            </p>
+                            <p>
+                                Die Küste ist meine Heimat, und das spürt man in meinen Bildern. Ich liebe es, Paare barfuß im Sand, zwischen den Dünen oder emotional auf den Buhnen zu fotografieren. Wer einen Fotografen sucht, der das Meer versteht und die Seele der Ostsee einfängt, ist bei mir genau richtig.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Katrin -->
+                    <div class="text-center md:text-left">
+                         <div class="mb-6 overflow-hidden shadow-sm">
+                            <img src="Katrin_Witt_Martens_Hochzeitsmagazin_in_Rostock.png" alt="Katrin Witt-Martens" class="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl text-mag-black mb-1">Katrin Witt-Martens</h3>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Hochzeitsfotografin & Herausgeberin</p>
+                        <div class="prose text-gray-600 text-sm leading-relaxed">
+                            <p class="mb-4">
+                                Seit 8 Jahren begleite ich Paare an ihrem großen Tag, und die Leidenschaft ist so stark wie am ersten Tag. Mein Blick gilt den leisen, intimen Augenblicken: den Details, den Blicken, den kleinen Gesten.
+                            </p>
+                            <p>
+                                Meine Bilder erzählen Geschichten. Diese Liebe zum Detail ist auch der Grund, warum ich dieses Magazin herausgebe: Um euch Inspiration und Qualität zu bieten, die über den Tag hinausgeht. Ich schaffe Erinnerungen, die ihr für immer in Ehren halten werdet.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center pt-8 border-t border-gray-100">
+                    <a href="https://www.hochzeitsfoto-rostock.de/" target="_blank" class="inline-block bg-mag-black text-white px-10 py-4 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300 shadow-lg">
+                        Besuchen Sie unsere Website
+                    </a>
+                    <p class="mt-4 text-xs text-gray-400">Für Galerien, Preise und Verfügbarkeit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: STYLING & BEAUTY (HCT Rostock) -->
+    <div id="stylingModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('stylingModal')"></div>
+        <div class="modal-content relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <!-- Header Modal -->
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <div>
+                    <h2 class="font-serif text-2xl md:text-3xl text-mag-black">Styling & Beauty</h2>
+                    <p class="text-xs uppercase tracking-widest text-mag-gold">Im Interview: Linda & Marko (HCT Rostock)</p>
+                </div>
+                <button onclick="toggleModal('stylingModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Body Modal -->
+            <div class="p-8 md:p-12 bg-white">
+                
+                <!-- Intro -->
+                <div class="mb-10 text-center max-w-3xl mx-auto">
+                     <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Wenn es um den großen Tag geht, überlässt das Team von HCT nichts dem Zufall. Im Salon finden sich zahlreiche begeisterte „Steck-Profis“, die ihre Leidenschaft für festliche Frisuren in einer spezialisierten Brautgruppe bündeln.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Hier ist Expertise kein Zufallsprodukt: Durch kontinuierliche Extra-Schulungen bleibt das Team am Puls der Zeit, tauscht sich intern über neueste Techniken aus und koordiniert die beliebten Außer-Haus-Termine, um jeder Braut ihren Wunschtermin zu ermöglichen.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        Um zu erfahren, was die kommende Saison bereithält, haben wir Linda und Marko aus dem Hanse Karree in Rostock für euch befragt.
+                    </p>
+                </div>
+
+                <div class="border-t border-b border-gray-100 py-10 my-10 space-y-10">
+                    <!-- Q1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Wie würdet ihr euren Hochzeitsservice in wenigen Worten beschreiben?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> Die Wünsche einer Braut zu lesen und diese mit handwerklicher Meisterschaft zum Leben zu erwecken, ist der Kern unserer Arbeit. Wir sehen es als unsere Berufung, die Schönheit der Braut zu unterstreichen und sie an diesem besonderen Tag mit Herz und Menschlichkeit zu begleiten. Wir sind nicht einfach nur Stylisten, sondern mentale Begleiter, die fachliche Perfektion mit emotionalem Rückhalt verbinden.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Wann sollten Brautpaare idealerweise mit der Planung des Stylings beginnen? Und wie läuft ein erstes Beratungsgespräch bei euch ab?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> Der ideale Zeitpunkt für die erste Kontaktaufnahme ist, sobald der Hochzeitstermin feststeht. Der eigentliche Probetermin findet dann meist etwa 6 bis 8 Wochen vor der Hochzeit statt. In unserem Beratungsgespräch geht es in der ersten Phase vor allem um das gegenseitige Kennenlernen – die Chemie muss einfach stimmen. Wir nehmen uns viel Zeit, um die individuellen Wünsche von Braut und Bräutigam zu erfragen. Damit sich unsere Kunden rundum wohlfühlen, bieten wir für diese Termine separate, intime Räumlichkeiten an. Begleitpersonen wie die Mutter oder die Trauzeugen sind natürlich herzlich willkommen, während wir die Details besprechen.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Wie helft ihr Bräuten, die noch keine Vorstellung von ihrer Frisur haben?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> In den meisten Fällen ist das Brautkleid der wichtigste Wegweiser. Sobald das Kleid gewählt ist, ergibt sich daraus oft schon die passende Stilrichtung. In der Kennenlernphase analysieren wir zudem genau den Typ der Kundin. Falls die Vorstellung noch vage ist, nutzen wir innovative KI-Unterstützung, um anhand von Bildmaterial erste Ideen zu visualisieren. Diese Entwürfe dienen uns dann als Basis, um den Look ganz individuell an der Braut auszuarbeiten.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Kommt ihr am Hochzeitstag auch zur Location, oder findet alles im Salon statt?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> Wir sind hier absolut flexibel. Wir stylen sowohl in der entspannten Atmosphäre unseres Salons als auch direkt vor Ort an der gewünschten Location. Das wird im Vorfeld ganz individuell mit dem Brautpaar abgestimmt, damit der Morgen der Hochzeit so stressfrei wie möglich verläuft.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Welche Haartrends seht ihr für Hochzeiten im Jahr 2026? Spielt Nachhaltigkeit auch beim Hochzeitsstyling eine Rolle?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p class="mb-4"><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> Für 2026 sehen wir zwei große Strömungen: Einerseits den Wunsch nach „viel Haar“ – offen, opulent und gewellt, wobei wir hier sehr gerne mit Tressen und Extensions arbeiten, um das Volumen zu maximieren. Im Kontrast dazu steht der sehr klassische, elegante „Sleek-Look“, bei dem das Haar eng am Kopf anliegt und als perfekt gearbeiteter Dutt oder Chignon abschließt.</p>
+                            <p>Beim Thema Nachhaltigkeit und Verträglichkeit gehen wir auf Nummer sicher: Wir bieten an, das Make-up oder die Frisur auch mit eigenen, bereits bewährten Produkten der Braut zu erarbeiten, um Hautirritationen oder allergische Reaktionen am großen Tag konsequent auszuschließen.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-4">
+                            <h4 class="font-serif text-xl text-mag-black font-bold">Welche Klassiker bleiben zeitlos und werden besonders oft nachgefragt?</h4>
+                        </div>
+                        <div class="md:col-span-8 text-gray-600 leading-relaxed">
+                            <p><span class="text-mag-gold font-bold uppercase text-xs tracking-widest mr-2">HCT:</span> Halbgesteckte Frisuren sind und bleiben der absolute Favorit. Sie sind unglaublich wandelbar und passen zu fast jedem Stil. Auch der Schleier bleibt ein zeitloses Must-have; er lässt sich in nahezu jede Frisur harmonisch integrieren und verleiht dem Look das klassische Braut-Gefühl.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Partner -->
+                <div class="text-center">
+                    <a href="https://www.hct-hansekarree.de/" target="_blank" class="inline-block bg-mag-black text-white px-10 py-4 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300 shadow-lg">
+                        Zum Salon HCT Hanse Karree
+                    </a>
+                    <p class="mt-4 text-xs text-gray-400">Terminvereinbarung & weitere Infos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: JUWELIER (NEU) -->
+    <div id="juwelierModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('juwelierModal')"></div>
+        <div class="modal-content relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <!-- Header Modal -->
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <div>
+                    <h2 class="font-serif text-2xl md:text-3xl text-mag-black">Juwelier & Trauringe</h2>
+                    <p class="text-xs uppercase tracking-widest text-mag-gold">Trends 2026 & Experten-Tipps</p>
+                </div>
+                <button onclick="toggleModal('juwelierModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Body Modal -->
+            <div class="p-8 md:p-12 bg-white">
+                
+                <!-- Intro Emotion -->
+                <div class="mb-12 text-center max-w-3xl mx-auto">
+                    <span class="text-mag-gold text-4xl mb-4 block"><i class="fa-regular fa-heart"></i></span>
+                    <h3 class="font-serif text-2xl mb-4">Unendliche Liebe, ewige Treue</h3>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        "Ein Ehering ist weit mehr als ein Schmuckstück: Er symbolisiert ein Versprechen, das keine Grenzen kennt. Sein kreisförmiges Design steht für die Unendlichkeit und macht ihn zu einem bedeutsamen Begleiter auf dem Lebensweg."
+                    </p>
+                </div>
+
+                <!-- Trends 2026 Grid -->
+                <div class="bg-mag-grey p-8 mb-12 border-l-4 border-mag-gold">
+                    <h3 class="font-serif text-2xl mb-6">2026: Trends bei Hochzeitsringen</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                        <div>
+                            <h4 class="font-bold mb-2 uppercase tracking-wide text-mag-black">Individualität</h4>
+                            <p class="text-gray-600">Erlaubt ist, was gefällt. Der Trend geht stark zu personalisierten Elementen wie Gravuren, Fingerabdrücken oder der Integration von farbigen Edelsteinen.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2 uppercase tracking-wide text-mag-black">Mehrfarbigkeit</h4>
+                            <p class="text-gray-600">Ob sanfte Farbverläufe oder klare Abgrenzungen zwischen Gelbgold, Weißgold und Platin – Bicolor und Tricolor Designs sind so vielfältig wie die Paare selbst.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2 uppercase tracking-wide text-mag-black">Nachhaltigkeit</h4>
+                            <p class="text-gray-600">Ein Fokus liegt auf umweltfreundlichen Edelmetallen und Labor-Edelsteinen für Paare, die verantwortungsbewusste Entscheidungen treffen möchten.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ratgeber Section -->
+                <div class="mb-12">
+                    <h3 class="font-serif text-3xl mb-8 text-center">Der große Schmuck-Ratgeber</h3>
+                    <div class="space-y-8">
+                        
+                        <div class="flex gap-4">
+                            <div class="text-mag-gold text-xl pt-1"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4 class="font-serif text-xl mb-2">Das Material: Worauf es ankommt</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Der Wert und die Härte eines Goldringes hängen maßgeblich vom Feingehalt (Karat) ab. Legierungen wie 585er oder 750er Gold sind oft besser für den Alltag geeignet, da sie härter sind. Weißgold wird oft rhodiniert, um den hellen Ton zu erhalten.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="text-mag-gold text-xl pt-1"><i class="fa-solid fa-ruler-combined"></i></div>
+                            <div>
+                                <h4 class="font-serif text-xl mb-2">Die perfekte Passform</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Ein entscheidender Profi-Tipp: Messen Sie zur richtigen Tageszeit. Unsere Finger haben morgens oft einen geringeren Durchmesser als am Nachmittag oder Abend.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="text-mag-gold text-xl pt-1"><i class="fa-solid fa-recycle"></i></div>
+                            <div>
+                                <h4 class="font-serif text-xl mb-2">Unikate und Umarbeitung</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Sie haben geerbte Schmuckstücke? Eine wunderbare Idee ist es, diese umarbeiten zu lassen. So tragen Sie ein Stück Familiengeschichte bei sich, das in neuem Glanz erstrahlt.
+                                </p>
+                            </div>
+                        </div>
+
+                         <div class="flex gap-4">
+                            <div class="text-mag-gold text-xl pt-1"><i class="fa-regular fa-gem"></i></div>
+                            <div>
+                                <h4 class="font-serif text-xl mb-2">Brautschmuck und Harmonie</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Neben den Ringen spielt der Brautschmuck eine zentrale Rolle. Er sollte nicht nur zum Kleid, sondern auch zum Typ passen. Stimmen Sie doch einmal den Blumenschmuck im Haar auf die restlichen Accessoires ab!
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Partner Spotlight: Juwelier Zeitlos -->
+                <div class="bg-mag-black text-white p-10 rounded-sm text-center">
+                    <span class="text-mag-gold uppercase tracking-widest text-xs font-bold mb-4 block">Unser Partner in Rostock</span>
+                    <h3 class="font-serif text-3xl mb-4">Juwelier Zeitlos</h3>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        In der Rostocker Innenstadt bietet Juwelier Zeitlos über 1.000 Modelle zur Auswahl, die individuell angepasst werden können. Wer es eilig hat, findet auch eine Vielzahl sofort verfügbarer Trauringe. Lassen Sie sich kompetent beraten.
+                    </p>
+                    <a href="https://www.juwelier-zeitlos.de/" target="_blank" class="inline-block border border-white text-white px-10 py-3 text-sm uppercase tracking-widest hover:bg-mag-gold hover:border-mag-gold hover:text-white transition-all duration-300">
+                        Zu Juwelier Zeitlos
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: IMPRESSUM -->
+    <div id="impressumModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('impressumModal')"></div>
+        <div class="modal-content relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <h2 class="font-serif text-2xl text-mag-black">Impressum</h2>
+                <button onclick="toggleModal('impressumModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="p-8 md:p-12 bg-white legal-text">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-2">Angaben gemäß § 5 TMG</h4>
+                        <p class="font-bold text-mag-black">Katrin Witt-Martens</p>
+                        <p>Dehmelstraße 7<br>18055 Rostock</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-2">Kontakt</h4>
+                        <p>Telefon: 01 60 789 08 26</p>
+                        <p>E-Mail: <a href="mailto:info@hochzeitsfoto-rostock.de" class="text-mag-gold hover:underline">info@hochzeitsfoto-rostock.de</a></p>
+                        <p class="text-xs mt-2 text-gray-400">Sie können mich gerne anrufen oder mir eine Email mit Ihrer Nachricht schicken. Ich melde mich umgehend bei Ihnen zurück!</p>
+                    </div>
+                </div>
+                
+                <h3>Hinweise zur Streitschlichtung</h3>
+                <p>Die Europäische Kommission stellt eine Plattform für die außergerichtliche Online-Streitbeilegung (OS-Plattform) bereit, die unter <a href="https://www.ec.europa.eu/consumers/odr" target="_blank" class="text-mag-gold">www.ec.europa.eu/consumers/odr</a> aufrufbar ist. Meine E-Mail-Adresse finden Sie in meinem Impressum. Ich nehme freiwillig am Streitschlichtungsverfahren teil. Eine Liste mit den Kontaktdaten der anerkannten Streitschlichtungsstellen finden Sie unter <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.adr.show" target="_blank" class="text-mag-gold">https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.adr.show</a>.</p>
+                
+                <h3>Disclaimer (Haftungsausschluss)</h3>
+                <p><strong>Haftung für Inhalte</strong><br>Die von Katrin Witt-Martens bereitgestellten Informationen sind mit großer Sorgfalt erstellt worden. Fehler sind jedoch nicht völlig auszuschließen. Für Schäden durch Nutzung unserer Seite haften wir nicht, es sei denn, es liegt vorsätzliches oder grob fahrlässiges Verschulden von Katrin Witt-Martens vor.</p>
+                <p><strong>Haftung für Links</strong><br>Soweit ich auf fremde Internetauftritte verweisen (etwa durch Links), handelt es sich lediglich um Hinweise auf fremde Inhalte, die ich mir keinesfalls zu eigen mache. Für fremde Internetseiten, auf die ich verweise, sind allein die Betreiber dieser Seiten verantwortlich.</p>
+                <p><strong>Urheberrecht</strong><br>Die Rechte der hier veröffentlichten Bilder liegen ausschließlich bei Katrin Witt-Martens (sowie ggf. gekennzeichneten Urhebern). Es ist nicht gestattet hier veröffentlichte Fotografien für private sowie gewerbliche Zwecke zu nutzen.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: DATENSCHUTZ -->
+    <div id="datenschutzModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="toggleModal('datenschutzModal')"></div>
+        <div class="modal-content relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl rounded-sm flex flex-col">
+            <div class="sticky top-0 bg-white z-10 border-b border-gray-100 p-6 flex justify-between items-center">
+                <h2 class="font-serif text-2xl text-mag-black">Datenschutzerklärung</h2>
+                <button onclick="toggleModal('datenschutzModal')" class="text-gray-400 hover:text-mag-black transition-colors text-2xl w-10 h-10 flex items-center justify-center"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="p-8 md:p-12 bg-white legal-text">
+                <p>Diese Datenschutzerklärung informiert Sie über die Rechtsgrundlage, den Zweck und den Umfang der Verarbeitung der von uns erhobenen personenbezogenen Daten.</p>
+                
+                <h3>Datenschutzrechtlich Verantwortlicher</h3>
+                <p>Katrin Witt-Martens<br>Dehmelstraße 7, 18055 Rostock, Deutschland<br>
+                <strong>V.i.S.d.P:</strong> Katrin Witt-Martens<br>
+                Telefon: 01 60 789 08 26<br>
+                E-Mail: kontakt@die-kleinen-rostocker.de</p>
+
+                <h3>Zugriffsdaten / Server Log-Files</h3>
+                <p>Beim Aufrufen unserer Webseite werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sog. Logfile gespeichert. Folgende Informationen werden dabei ohne Ihr Zutun erfasst und bis zur automatisierten Löschung gespeichert: IP-Adresse des anfragenden Rechners, Datum und Uhrzeit des Zugriffs, Name und URL der abgerufenen Datei, Website, von der aus der Zugriff erfolgt (Referrer-URL), verwendeter Browser und ggf. das Betriebssystem Ihres Rechners sowie der Name Ihres Access-Providers.</p>
+                <p>Diese Daten werden durch uns zu folgenden Zwecken verarbeitet: Gewährleistung eines reibungslosen Verbindungsaufbaus der Website, Gewährleistung einer komfortablen Nutzung unserer Website, Gewährleistung und Auswertung der Systemsicherheit und -stabilität sowie anonymisiert zu weiteren administrativen Zwecken.</p>
+                <p>Rechtsgrundlagen für die Datenverarbeitung sind Art. 6 Abs. 1 S. 1 b) und f) DSGVO. Unser berechtigtes Interesse folgt aus oben aufgelisteten Zwecken zur Datenerhebung. Eine Zusammenführung mit anderen bei uns vorhandenen Daten erfolgt nicht.</p>
+
+                <h3>Cookies</h3>
+                <p>Auf unserer Webseite werden Cookies verwendet. Bei Cookies handelt es sich um kleine Dateien, die auf Ihrem Endgerät gespeichert werden, wenn Sie unsere Webseite besuchen. Wir setzen Cookies ein, um die Nutzung unserer Webseite zu erleichtern sowie zu statistischen Zwecken, um die Webseite zu verbessern. Die durch Cookies verarbeiteten Daten sind für die genannten Zwecke zur Wahrung unserer berechtigten Interessen sowie der berechtigten Interessen Dritter nach Art. 6 Abs. 1 S. 1 lit. f DSGVO erforderlich.</p>
+                <p>Die meisten der von uns verwendeten temporäre Cookies (sogenannte „Session-Cookies“), werden nach Ende der Nutzung unserer Webseite bzw. beim Schließen des Browsers automatisch von Ihrem Endgerät gelöscht. Andere Cookies verbleiben auf Ihrem Computersystem und ermöglichen es uns, Ihr Computersystem bei Ihrem nächsten Besuch wiederzuerkennen (sog. dauerhafte Cookies).</p>
+                <p>Die meisten Browser akzeptieren Cookies automatisch. Sie können Ihren Browser jedoch so konfigurieren, dass keine Cookies auf Ihrem Computer gespeichert werden oder stets ein Hinweis erscheint, bevor ein neuer Cookie angelegt wird. Die vollständige Deaktivierung von Cookies kann jedoch dazu führen, dass Sie nicht alle Funktionen unserer Website nutzen können.</p>
+
+                <h3>Kontaktaufnahme</h3>
+                <p>Wenn Sie mit uns in Kontakt treten, beispielsweise mittels des Kontaktformulars auf unserer Webseite, per E-Mail oder per Telefon ist die Angabe Ihres Namens und Ihrer Email-Adresse erforderlich, damit wir wissen, von wem die Anfrage stammt und wir diese bearbeiten können. Weitere Angaben können freiwillig getätigt werden. Rechtsgrundlagen dieser Datenverarbeitung sind Art. 6 Abs. 1 S. 1 lit b) DSGVO, sofern es eine vorvertragliche Maßnahme ist sowie Art. 6 Abs. 1 lit. a) aufgrund Ihrer Einwilligung. Die hierbei erhobenen personenbezogenen Daten werden gelöscht, sofern diese nicht mehr erforderlich sind und einer Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+                <h3>Kommentare</h3>
+                <p>In unserem Blog können Sie öffentliche Kommentare abgeben. Ihr Kommentar wird mit Ihrem angegebenen Nutzernamen veröffentlicht. Die Angabe von Nutzernamen und E-Mail-Adresse ist erforderlich. Wenn Sie einen Kommentar abgeben, speichern wir weiterhin Ihre IP-Adresse, die wir spätestens nach 3 Monat löschen. Rechtsgrundlagen sind Art. 6 Abs. 1 S. 1 lit. b und f DS-GVO.</p>
+
+                <h3>Newsletter</h3>
+                <p>In unserem Newsletter erhalten Sie aktuelle Informationen. Wenn Sie sich anmelden, willigen Sie in die dafür erforderliche Erhebung Ihrer Daten ein, Art. 6 Abs. 1 a) DSGVO. Für die Anmeldung verwenden wir das Double-Opt-In-Verfahren. Sie können sich jederzeit abmelden, zum Beispiel über den am Ende eines jeden Newsletters angegebenen Link.</p>
+                <p>Die bei der Newsletter-Anmeldung erhobenen Daten werden ausschließlich für den Versand und die Erfolgsmessung (Öffnungsquote via „web-beacons“) verwendet. Wir verwenden diese Information nur, um die inhaltlichen Interessen der Empfänger auszuwerten.</p>
+
+                <h3>Weitergabe personenbezogener Daten</h3>
+                <p>Wir geben grundsätzlich keine personenbezogenen Daten an Dritte weiter, es sei denn, Sie haben ausdrücklich eingewilligt (Art. 6 Abs. 1 S. 1 lit. a DSGVO), es ist für die Vertragsabwicklung erforderlich (Art. 6 Abs. 1 S. 1 lit. b DSGVO), es besteht eine gesetzliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c DSGVO) oder ein berechtigtes Interesse (Art. 6 Abs. 1 S. 1 lit. f DSGVO).</p>
+
+                <h3>Teilnahme an Verlosungen</h3>
+                <p>Wir bieten gelegentlich Verlosungen an (z.B. Musik-CDs, Bootsfahrten, Adventskalender-Quiz). Wenn Sie teilnehmen, willigen Sie in die Erhebung Ihrer Daten (Email, Name) ein (Art. 6 Abs. 1 lit. a DSGVO). Die Teilnahme ist kostenlos und ab 18 Jahren möglich. Der Rechtsweg ist ausgeschlossen.</p>
+                <p>Die Daten werden ausschließlich zur Durchführung der Verlosung verarbeitet und danach gelöscht (beim Adventskalender-Quiz zum 31. Januar des Folgejahres). Nur sofern für die Gewinnsendung erforderlich, werden Daten an Kooperationspartner weitergegeben. Sie können Ihre Einwilligung jederzeit widerrufen.</p>
+
+                <h3>Analyse & Tracking</h3>
+                <h4>Google Analytics</h4>
+                <p>Diese Website nutzt Google Analytics, einen Webanalysedienst der Google LLC. Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DS-GVO. Google Analytics verwendet Cookies. IP-Adressen werden durch „_anonymizeIp()“ gekürzt. Sie können die Erfassung durch das Browser-Plug-in verhindern: <a href="http://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" class="text-mag-gold">Browser-Add-on zur Deaktivierung</a>.</p>
+
+                <h3>Social Media & Plugins</h3>
+                <h4>Facebook Plugin</h4>
+                <p>Wir verwenden Plugins von Facebook. Wenn Sie eine Seite aufrufen, die ein solches Plugin enthält, baut Ihr Browser eine direkte Verbindung mit den Servern von Facebook auf. Sind Sie bei Facebook eingeloggt, kann Facebook den Besuch Ihrem Konto zuordnen. Facebook hat sich dem EU-US Privacy Shield unterworfen. Weitere Infos: <a href="https://www.facebook.com/about/privacy/" target="_blank" class="text-mag-gold">Facebook Datenschutz</a>.</p>
+
+                <h4>YouTube, Google Maps, Google Fonts & Google Suche</h4>
+                <p>Wir binden Dienste der Google LLC ein (YouTube-Videos, Google Maps Karten, Google Fonts, Google Suche). Google verarbeitet Ihre personenbezogenen Daten auch in den USA und hat sich dem EU-US Privacy Shield unterworfen. Opt-Out: <a href="https://adssettings.google.com/authenticated" target="_blank" class="text-mag-gold">Google Ads Settings</a>.</p>
+
+                <h4>OpenStreetMap</h4>
+                <p>Wir binden Kartenausschnitte von OpenStreetMap ein. Dadurch wird Ihre IP-Adresse an einen Server von OSM übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+                <h3>Ihre Rechte</h3>
+                <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) und Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO).</p>
+                <p><strong>Widerspruchsrecht:</strong> Sie können der Verarbeitung Ihrer Daten jederzeit widersprechen.</p>
+
+                <h3>Zuständige Aufsichtsbehörde</h3>
+                <p>Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern<br>
+                Schloss Schwerin, Lennéstraße 1, 19053 Schwerin<br>
+                Webseite: <a href="https://www.datenschutz-mv.de" target="_blank" class="text-mag-gold">www.datenschutz-mv.de</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleModal(modalID) {
+            const modal = document.getElementById(modalID);
+            const body = document.body;
+            
+            if (modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    // Warten bis opacity transition fertig ist
+                }, 300);
+                body.style.overflow = 'auto'; // Scrollen wieder erlauben
+            } else {
+                modal.classList.add('active');
+                body.style.overflow = 'hidden'; // Scrollen verhindern
+            }
+        }
+
+        // Schließen mit ESC Taste
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modals = document.querySelectorAll('.modal.active');
+                modals.forEach(modal => {
+                    toggleModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
