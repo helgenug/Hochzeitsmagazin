@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hochzeitsmagazin Rostock - Der elegante Wegweiser für Ihre Traumhochzeit an der Ostsee. Herausgegeben von Katrin Witt-Martens.">
+    
+    <!-- SEO Meta Tags -->
     <title>Hochzeitsmagazin Rostock | Katrin Witt-Martens</title>
+    <meta name="description" content="Hochzeitsmagazin Rostock - Der elegante Wegweiser für Ihre Traumhochzeit an der Ostsee. Locations, Styling & Experten-Tipps. Herausgegeben von Katrin Witt-Martens.">
+    <meta name="author" content="Katrin Witt-Martens">
+    <meta name="keywords" content="Hochzeitsmagazin Rostock, Heiraten Ostsee, Hochzeitsfotograf Rostock, Hochzeitsplanung, Locations Rostock, Brautstyling Rostock">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.hochzeitsmagazin-rostock.de/">
+    
+    <!-- Social Media Vorschau (Open Graph) -->
+    <meta property="og:title" content="Hochzeitsmagazin Rostock | Katrin Witt-Martens">
+    <meta property="og:description" content="Der elegante Wegweiser für Ihre Traumhochzeit an der Ostsee. Locations, Styling & Experten-Tipps.">
+    <meta property="og:image" content="https://www.hochzeitsmagazin-rostock.de/teaser2.jpg">
+    <meta property="og:url" content="https://www.hochzeitsmagazin-rostock.de/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Strukturierte Daten für Google & KI (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Magazine",
+      "name": "Hochzeitsmagazin Rostock",
+      "headline": "Der Wegweiser für Ihre Traumhochzeit an der Ostsee",
+      "image": "https://www.hochzeitsmagazin-rostock.de/teaser2.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Katrin Witt-Martens",
+        "jobTitle": "Herausgeberin & Fotografin",
+        "url": "https://www.die-kleinen-rostocker.de"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Martens & Martens GbR",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.hochzeitsmagazin-rostock.de/Katrin_Witt_Martens_Hochzeitsmagazin_in_Rostock.png"
+        }
+      },
+      "datePublished": "2026-01-01",
+      "inLanguage": "de-DE",
+      "mainEntityOfPage": "https://www.hochzeitsmagazin-rostock.de"
+    }
+    </script>
+
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
     
     <!-- Google Fonts: Playfair Display (Serif) & Lato (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +82,11 @@
     </script>
 
     <style>
-        /* Zusätzliche feine Anpassungen */
+        /* Scroll Padding damit Header nicht den Inhalt verdeckt beim Springen */
+        html {
+            scroll-padding-top: 100px;
+        }
+
         body {
             font-feature-settings: "kern", "liga";
             -webkit-font-smoothing: antialiased;
@@ -124,11 +173,11 @@
             </div>
 
             <!-- Mobile Menu Button (Symbol) -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-mag-black z-50 relative focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-mag-black z-50 relative focus:outline-none" aria-label="Menü öffnen">
                 <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
             </button>
 
-            <!-- Mobile Menu Dropdown (NEU EINGEFÜGT FÜR IPHONE/ANDROID) -->
+            <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl flex-col md:hidden">
                 <a href="#editorial" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Editorial</a>
                 <a href="#inhalt" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Inhalt</a>
@@ -344,6 +393,8 @@
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Neue Anfrage über Hochzeitsmagazin Rostock">
+            <!-- WICHTIG: Redirect nach Absenden -->
+            <input type="hidden" name="_next" value="https://www.hochzeitsmagazin-rostock.de/">
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
