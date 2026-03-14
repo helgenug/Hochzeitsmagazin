@@ -269,13 +269,19 @@
             </div>
 
             <div class="bg-white shadow-sm p-8 md:p-12">
-                <form action="https://formsubmit.co/info@die-kleinen-rostocker.de" method="POST" class="space-y-6">
-                    <!-- Formsubmit Konfiguration -->
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Neue Anzeigenanfrage – Hochzeitsmagazin Rostock 2026">
-                    <input type="hidden" name="_next" value="https://www.hochzeitsmagazin-rostock.de/kontakt">
-                    <input type="hidden" name="_template" value="table">
+                <!-- Erfolgs- / Fehlermeldung -->
+                <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 px-6 py-5 mb-6 text-sm leading-relaxed">
+                    <strong class="block font-bold mb-1">Vielen Dank für Ihre Anfrage!</strong>
+                    Wir melden uns innerhalb von 48 Stunden mit einem konkreten Angebot.
+                </div>
+                <div id="form-error" class="hidden bg-red-50 border border-red-200 text-red-800 px-6 py-5 mb-6 text-sm leading-relaxed">
+                    <strong class="block font-bold mb-1">Etwas ist schiefgelaufen.</strong>
+                    Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:info@die-kleinen-rostocker.de" class="underline">info@die-kleinen-rostocker.de</a>.
+                </div>
+
+                <form id="anzeigen-form" action="https://formspree.io/f/mlgplzzg" method="POST" class="space-y-6">
+                    <!-- Honeypot Spam-Schutz -->
+                    <input type="text" name="_gotcha" style="display:none">
 
                     <!-- Unternehmen & Ansprechpartner -->
                     <div>
@@ -387,8 +393,8 @@
 
                     <!-- Submit -->
                     <div class="pt-4">
-                        <button type="submit" class="w-full bg-mag-black text-white py-4 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300 shadow-lg cursor-pointer">
-                            <i class="fa-solid fa-paper-plane mr-2"></i> Anzeigenanfrage absenden
+                        <button type="submit" id="submit-btn" class="w-full bg-mag-black text-white py-4 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300 shadow-lg cursor-pointer">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> <span id="btn-label">Anzeigenanfrage absenden</span>
                         </button>
                         <p class="text-xs text-gray-400 text-center mt-3">Wir melden uns innerhalb von 48 Stunden mit einem Angebot.</p>
                     </div>
@@ -404,12 +410,12 @@
             <p class="text-gray-500">Katrin Witt-Martens freut sich auf Ihren Anruf oder Ihre E-Mail.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="mailto:info@die-kleinen-rostocker.de" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
+            <a href="/cdn-cgi/l/email-protection#d5bcbbb3ba95b1bcb0f8beb9b0bcbbb0bbf8a7baa6a1bab6beb0a7fbb1b0" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="w-14 h-14 rounded-full bg-mag-grey flex items-center justify-center text-mag-gold text-xl mb-4 group-hover:bg-mag-gold group-hover:text-white transition-all duration-300">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <h3 class="font-serif text-lg mb-2">E-Mail</h3>
-                <p class="text-gray-500 text-sm">info@die-kleinen-rostocker.de</p>
+                <p class="text-gray-500 text-sm"><span class="__cf_email__" data-cfemail="d6bfb8b0b996b2bfb3fbbdbab3bfb8b3b8fba4b9a5a2b9b5bdb3a4f8b2b3">[email&#160;protected]</span></p>
             </a>
             <a href="tel:+491607890826" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="w-14 h-14 rounded-full bg-mag-grey flex items-center justify-center text-mag-gold text-xl mb-4 group-hover:bg-mag-gold group-hover:text-white transition-all duration-300">
@@ -435,7 +441,7 @@
                 <h4 class="font-serif text-xl mb-4">Herausgeberin</h4>
                 <p class="text-gray-400 text-sm leading-relaxed mb-2">Katrin Witt-Martens</p>
                 <p class="text-gray-400 text-sm leading-relaxed mb-2">Dehmelstraße 7, 18055 Rostock</p>
-                <a href="mailto:info@die-kleinen-rostocker.de" class="text-mag-gold hover:text-white transition-colors text-sm">info@die-kleinen-rostocker.de</a>
+                <a href="/cdn-cgi/l/email-protection#4920272f26092d202c6422252c20272c27643b263a3d262a222c3b672d2c" class="text-mag-gold hover:text-white transition-colors text-sm"><span class="__cf_email__" data-cfemail="e38a8d858ca3878a86ce888f868a8d868dce918c90978c80888691cd8786">[email&#160;protected]</span></a>
             </div>
             <div>
                 <h4 class="font-serif text-xl mb-4">Links</h4>
@@ -461,7 +467,7 @@
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile Menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -496,6 +502,47 @@
                 }
             });
         });
+
+        // Formspree – async Submit
+        const anzeigenForm = document.getElementById('anzeigen-form');
+        const successBox  = document.getElementById('form-success');
+        const errorBox    = document.getElementById('form-error');
+        const submitBtn   = document.getElementById('submit-btn');
+        const btnLabel    = document.getElementById('btn-label');
+
+        if (anzeigenForm) {
+            anzeigenForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                successBox.classList.add('hidden');
+                errorBox.classList.add('hidden');
+                submitBtn.disabled = true;
+                btnLabel.textContent = 'Wird gesendet …';
+
+                try {
+                    const response = await fetch(anzeigenForm.action, {
+                        method: 'POST',
+                        body: new FormData(anzeigenForm),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        successBox.classList.remove('hidden');
+                        anzeigenForm.reset();
+                        document.querySelectorAll('.format-card').forEach(c => c.classList.remove('selected'));
+                        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        errorBox.classList.remove('hidden');
+                        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } catch {
+                    errorBox.classList.remove('hidden');
+                    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } finally {
+                    submitBtn.disabled = false;
+                    btnLabel.innerHTML = '<i class="fa-solid fa-paper-plane mr-2"></i> Anzeigenanfrage absenden';
+                }
+            });
+        }
     </script>
 </body>
 </html>
