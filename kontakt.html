@@ -116,7 +116,7 @@
         }
         .form-input::placeholder { color: #9ca3af; }
         select.form-input { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.25rem; padding-right: 2.5rem; }
-        
+
         /* Anzeigenformat Karten */
         .format-card {
             border: 2px solid #e5e7eb;
@@ -147,21 +147,27 @@
             <a href="index.html" class="font-serif text-2xl tracking-wide uppercase hover:text-mag-gold transition-colors z-50 relative">
                 Hochzeitsmagazin <span class="text-mag-gold">Rostock</span>
             </a>
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-600">
                 <a href="index.html#editorial" class="hover:text-mag-gold transition-colors">Editorial</a>
                 <a href="index.html#inhalt" class="hover:text-mag-gold transition-colors">Inhalt</a>
+                <a href="trends.html" class="hover:text-mag-gold transition-colors">Trends 2026/27</a>
+                <a href="trauorte.html" class="hover:text-mag-gold transition-colors">Trauorte MV</a>
+                <a href="faq.html" class="hover:text-mag-gold transition-colors">FAQ</a>
                 <a href="index.html#mediadaten" class="hover:text-mag-gold transition-colors">Partner werden</a>
-                <a href="index.html#ueber-uns" class="hover:text-mag-gold transition-colors">Herausgeberin</a>
-                <a href="kontakt.html" class="text-mag-gold font-semibold transition-colors border-b border-mag-gold pb-0.5">Kontakt</a>
+                <a href="kontakt.html" class="text-mag-gold font-semibold border-b border-mag-gold pb-0.5">Kontakt</a>
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-2xl text-mag-black z-50 relative focus:outline-none" aria-label="Menü öffnen">
                 <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
             </button>
+            <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl flex-col md:hidden">
                 <a href="index.html#editorial" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Editorial</a>
                 <a href="index.html#inhalt" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Inhalt</a>
+                <a href="trends.html" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Trends 2026/27</a>
+                <a href="trauorte.html" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Trauorte MV</a>
+                <a href="faq.html" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">FAQ</a>
                 <a href="index.html#mediadaten" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Partner werden</a>
-                <a href="index.html#ueber-uns" class="block py-4 px-6 text-sm uppercase tracking-widest text-gray-600 hover:bg-gray-50 border-b border-gray-50 mobile-link">Herausgeberin</a>
                 <a href="kontakt.html" class="block py-4 px-6 text-sm uppercase tracking-widest text-mag-gold font-semibold hover:bg-gray-50 mobile-link">Kontakt</a>
             </div>
         </div>
@@ -217,32 +223,24 @@
             <p class="mt-4 text-gray-500">Wählen Sie das Format, das zu Ihrem Auftritt passt.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-
-            <!-- Ganzseite -->
             <div class="bg-mag-grey p-6 text-center border-b-4 border-mag-gold shadow-sm hover:shadow-lg transition-all duration-300">
                 <div class="bg-mag-gold w-20 h-28 mx-auto mb-4 flex items-center justify-center text-white text-xs uppercase tracking-widest font-bold">1/1</div>
                 <h3 class="font-serif text-xl mb-2">Ganzseite</h3>
                 <p class="text-gray-500 text-sm mb-3">210 × 297 mm<br>Maximale Wirkung</p>
                 <span class="text-xs uppercase tracking-widest text-mag-gold font-bold">Premiumformat</span>
             </div>
-
-            <!-- Halbseite -->
             <div class="bg-mag-grey p-6 text-center border-b-4 border-gray-200 hover:border-mag-gold shadow-sm hover:shadow-lg transition-all duration-300">
                 <div class="bg-gray-300 w-20 h-14 mx-auto mb-4 flex items-center justify-center text-white text-xs uppercase tracking-widest font-bold">1/2</div>
                 <h3 class="font-serif text-xl mb-2">Halbseite</h3>
                 <p class="text-gray-500 text-sm mb-3">210 × 148 mm<br>Querformat</p>
                 <span class="text-xs uppercase tracking-widest text-gray-400 font-bold">Beliebt</span>
             </div>
-
-            <!-- Viertelseite -->
             <div class="bg-mag-grey p-6 text-center border-b-4 border-gray-200 hover:border-mag-gold shadow-sm hover:shadow-lg transition-all duration-300">
                 <div class="bg-gray-300 w-14 h-14 mx-auto mb-4 flex items-center justify-center text-white text-xs uppercase tracking-widest font-bold">1/4</div>
                 <h3 class="font-serif text-xl mb-2">Viertelseite</h3>
                 <p class="text-gray-500 text-sm mb-3">105 × 148 mm<br>Hochformat</p>
                 <span class="text-xs uppercase tracking-widest text-gray-400 font-bold">Einstieg</span>
             </div>
-
-            <!-- Advertorial -->
             <div class="bg-mag-grey p-6 text-center border-b-4 border-gray-200 hover:border-mag-gold shadow-sm hover:shadow-lg transition-all duration-300">
                 <div class="bg-gray-300 w-20 h-28 mx-auto mb-4 flex items-center justify-center text-white text-xs uppercase tracking-widest font-bold text-center leading-tight">Adver&shy;torial</div>
                 <h3 class="font-serif text-xl mb-2">Advertorial</h3>
@@ -250,7 +248,6 @@
                 <span class="text-xs uppercase tracking-widest text-gray-400 font-bold">Storytelling</span>
             </div>
         </div>
-
         <div class="text-center">
             <a href="mediadaten_hochzeitsmagazin 2026.pdf" target="_blank" rel="noopener" class="inline-block bg-mag-black text-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-mag-gold transition-all duration-300">
                 <i class="fa-solid fa-download mr-2"></i> Mediadaten 2026 herunterladen
@@ -283,7 +280,7 @@
                     <!-- Honeypot Spam-Schutz -->
                     <input type="text" name="_gotcha" style="display:none">
 
-                    <!-- Unternehmen & Ansprechpartner -->
+                    <!-- Unternehmen -->
                     <div>
                         <p class="text-xs uppercase tracking-widest text-mag-gold font-bold mb-4">Ihr Unternehmen</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -410,12 +407,12 @@
             <p class="text-gray-500">Katrin Witt-Martens freut sich auf Ihren Anruf oder Ihre E-Mail.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/cdn-cgi/l/email-protection#d5bcbbb3ba95b1bcb0f8beb9b0bcbbb0bbf8a7baa6a1bab6beb0a7fbb1b0" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
+            <a href="mailto:info@die-kleinen-rostocker.de" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="w-14 h-14 rounded-full bg-mag-grey flex items-center justify-center text-mag-gold text-xl mb-4 group-hover:bg-mag-gold group-hover:text-white transition-all duration-300">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <h3 class="font-serif text-lg mb-2">E-Mail</h3>
-                <p class="text-gray-500 text-sm"><span class="__cf_email__" data-cfemail="d6bfb8b0b996b2bfb3fbbdbab3bfb8b3b8fba4b9a5a2b9b5bdb3a4f8b2b3">[email&#160;protected]</span></p>
+                <p class="text-gray-500 text-sm">info@die-kleinen-rostocker.de</p>
             </a>
             <a href="tel:+491607890826" class="flex flex-col items-center text-center p-8 border border-gray-200 hover:border-mag-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="w-14 h-14 rounded-full bg-mag-grey flex items-center justify-center text-mag-gold text-xl mb-4 group-hover:bg-mag-gold group-hover:text-white transition-all duration-300">
@@ -448,9 +445,11 @@
                 <h4 class="font-serif text-xl mb-4">Links</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
                     <li><a href="index.html" class="hover:text-mag-gold transition-colors">Zurück zur Startseite</a></li>
+                    <li><a href="trends.html" class="hover:text-mag-gold transition-colors">Hochzeitstrends 2026/27</a></li>
+                    <li><a href="trauorte.html" class="hover:text-mag-gold transition-colors">Trauorte MV</a></li>
+                    <li><a href="faq.html" class="hover:text-mag-gold transition-colors">FAQ & Services</a></li>
                     <li><a href="https://www.die-kleinen-rostocker.de" target="_blank" rel="noopener" class="hover:text-mag-gold transition-colors">Die kleinen Rostocker</a></li>
-                    <li><a href="https://www.holger-martens.com" target="_blank" rel="noopener" class="hover:text-mag-gold transition-colors">Holger Martens Fotografie</a></li>
-                    <li><a href="https://www.hochzeitsfoto-rostock.de" target="_blank" rel="noopener" class="hover:text-mag-gold transition-colors">Hochzeitsfoto Rostock</a></li>
+                    <li><a href="https://www.hochzeitsfoto-rostock.de" target="_blank" rel="noopener" class="hover:text-mag-gold transition-colors">Martens &amp; Martens Fotografie</a></li>
                     <li><a href="index.html#footer-info" onclick="setTimeout(()=>{ if(window.toggleModal) toggleModal('impressumModal'); },300); return true;" class="hover:text-mag-gold transition-colors">Impressum</a></li>
                     <li><a href="index.html#footer-info" onclick="setTimeout(()=>{ if(window.toggleModal) toggleModal('datenschutzModal'); },300); return true;" class="hover:text-mag-gold transition-colors">Datenschutz</a></li>
                 </ul>
@@ -468,7 +467,7 @@
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Mobile Menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
