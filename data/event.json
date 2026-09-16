@@ -1,0 +1,19 @@
+{
+  "name": "HochzeitsMesse Rostock",
+  "year": 2027,
+  "timeZone": "Europe/Berlin",
+  "days": [
+    {
+      "start": "2027-01-30T10:00:00+01:00",
+      "end": "2027-01-30T18:00:00+01:00"
+    },
+    {
+      "start": "2027-01-31T10:00:00+01:00",
+      "end": "2027-01-31T18:00:00+01:00"
+    }
+  ],
+  "venue": "HanseMesse Rostock",
+  "address": "Zur HanseMesse 1–2, 18106 Rostock",
+  "url": "https://www.hochzeitsmesse-rostock.de/",
+  "checked": "2026-09-16"
+}

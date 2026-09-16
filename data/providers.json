@@ -1,0 +1,54 @@
+{
+  "categories": [
+    "Brautmode",
+    "Hochzeitsanzüge",
+    "Floristik",
+    "Beauty und Styling",
+    "Trauringe und Schmuck",
+    "Fotografie und Film",
+    "Locations und Hotels",
+    "Catering",
+    "Hochzeitstorten",
+    "Musik, Band und DJ",
+    "Freie Redner",
+    "Papeterie",
+    "Dekoration",
+    "Hochzeitsplanung",
+    "Fahrzeuge und Shuttle"
+  ],
+  "providers": [
+    {
+      "id": "martens",
+      "name": "Martens & Martens",
+      "category": "Fotografie und Film",
+      "region": "Rostock",
+      "kind": "publisher",
+      "url": "https://www.hochzeitsfoto-rostock.de/",
+      "description": "Katrin Witt-Martens und Holger Martens begleiten Hochzeiten mit Fotografie und Film. Katrin ist zugleich Herausgeberin dieses Magazins.",
+      "detail": "fotografie-film.html",
+      "checked": "2026-09-16"
+    },
+    {
+      "id": "hct",
+      "name": "Hair-Cosmetic-Team Rostock",
+      "category": "Beauty und Styling",
+      "region": "Rostock",
+      "kind": "editorial",
+      "url": "https://www.haircosmeticteam.de/leistungen",
+      "description": "HCT führt Brautfrisuren und Brautstyling im Leistungsangebot. Fragt den Salon nach Probetermin, Ablauf und Verfügbarkeit.",
+      "detail": "brautstyling.html",
+      "checked": "2026-09-16"
+    },
+    {
+      "id": "zeitlos",
+      "name": "Juwelier Zeitlos",
+      "category": "Trauringe und Schmuck",
+      "region": "Rostock",
+      "kind": "editorial",
+      "url": "https://www.juwelier-zeitlos.de/",
+      "description": "Rostocker Juwelier mit Trauringen, Schmuck und Uhren. Klärt Material, Passform, Gravur und Liefertermin bei der Beratung.",
+      "detail": "trauringe.html",
+      "checked": "2026-09-16"
+    }
+  ]
+}
