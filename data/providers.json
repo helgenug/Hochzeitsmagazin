@@ -1,32 +1,178 @@
 {
   "categories": [
-    "Brautmode",
-    "Hochzeitsanzüge",
-    "Floristik",
     "Beauty und Styling",
-    "Trauringe und Schmuck",
+    "Brautmode",
+    "Floristik",
     "Fotografie und Film",
-    "Locations und Hotels",
-    "Catering",
-    "Hochzeitstorten",
-    "Musik, Band und DJ",
-    "Freie Redner",
-    "Papeterie",
-    "Dekoration",
-    "Hochzeitsplanung",
-    "Fahrzeuge und Shuttle"
+    "Trauringe und Schmuck"
   ],
   "providers": [
     {
-      "id": "martens",
-      "name": "Martens & Martens",
-      "category": "Fotografie und Film",
+      "id": "bella-donna",
+      "name": "Bella Donna Modedesign",
       "region": "Rostock",
-      "kind": "publisher",
-      "url": "https://www.hochzeitsfoto-rostock.de/",
-      "description": "Katrin Witt-Martens und Holger Martens begleiten Hochzeiten mit Fotografie und Film. Katrin ist zugleich Herausgeberin dieses Magazins.",
-      "detail": "fotografie-film.html",
-      "checked": "2026-09-16"
+      "address": "Barnstorfer Weg 42, 18057 Rostock",
+      "phone": "0381 2037682",
+      "email": "info@bella-donna-mode.de",
+      "url": "https://www.bella-donna-mode.de/",
+      "services": [
+        "Brautkleider",
+        "Maßanfertigung",
+        "Designänderungen",
+        "Änderung fremd gekaufter Kleider"
+      ],
+      "profileText": "Das Designeratelier verbindet die Auswahl vorhandener Brautkleider mit individueller Anfertigung. Auch ein bereits anderswo gekauftes Kleid kann laut Anbieter für Änderungen vorgestellt werden. Beratungstermine sind online buchbar.",
+      "category": "Brautmode",
+      "description": "Brautkleider · Maßanfertigung · Designänderungen",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.bella-donna-mode.de/"
+      ],
+      "detail": "anbieter-bella-donna.html"
+    },
+    {
+      "id": "dahnke",
+      "name": "Blumen Dahnke",
+      "region": "Rostock",
+      "address": "Güstrower Straße 7, 18109 Rostock",
+      "phone": "0381 2103322",
+      "email": "info@blumen-dahnke.de",
+      "url": "https://blumen-dahnke.de/",
+      "services": [
+        "Hochzeitsfloristik",
+        "Dekorationskonzepte",
+        "Stil- und Farbberatung"
+      ],
+      "profileText": "Blumen Dahnke beschreibt die gemeinsame Entwicklung eines Dekorationskonzepts im persönlichen Gespräch. Zur Hochzeitsplanung gehören dabei Stilberatung, Farben und die Abstimmung der floralen Gestaltung.",
+      "category": "Floristik",
+      "description": "Hochzeitsfloristik · Dekorationskonzepte · Stil- und Farbberatung",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://blumen-dahnke.de/"
+      ],
+      "detail": "anbieter-dahnke.html"
+    },
+    {
+      "id": "blumenblock",
+      "name": "Blumenblock",
+      "region": "Rostock",
+      "address": "Satower Straße 74, 18059 Rostock",
+      "phone": "0381 4005378",
+      "email": "blumenblock@t-online.de",
+      "url": "https://www.blumenblock.de/",
+      "services": [
+        "Hochzeitsfloristik",
+        "Blumen für Feste",
+        "Sträuße",
+        "Gärtnerei"
+      ],
+      "profileText": "Zum Rostocker Betrieb gehören ein Blumenfachgeschäft mit Gärtnerei und ein weiterer Blumenpavillon an der Satower Straße. Hochzeitsfloristik ist als eigener Leistungsbereich ausgewiesen. Für eine Hochzeitsanfrage ist das Hauptgeschäft eine direkte Anlaufstelle.",
+      "category": "Floristik",
+      "description": "Hochzeitsfloristik · Blumen für Feste · Sträuße",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.blumenblock.de/"
+      ],
+      "detail": "anbieter-blumenblock.html"
+    },
+    {
+      "id": "blumenliebe",
+      "name": "Blumenliebe Ostsee",
+      "region": "Bad Doberan & Heiligendamm",
+      "address": "Nienhäger Chaussee 5, Bad Doberan",
+      "phone": "038203 735303",
+      "email": "",
+      "url": "https://www.blumenliebe-ostsee.de/",
+      "services": [
+        "Brautsträuße",
+        "Tischgestecke",
+        "Florale Dekowände",
+        "Ortstermin und Aufbau"
+      ],
+      "profileText": "Blumenliebe entwickelt Hochzeitsfloristik vom Brautstrauß bis zur Raumgestaltung. Der Anbieter nennt Beratung an der Location und Aufbau vor Ort in Mecklenburg-Vorpommern. Damit können Blumen für Zeremonie und Feier gemeinsam abgestimmt werden.",
+      "category": "Floristik",
+      "description": "Brautsträuße · Tischgestecke · Florale Dekowände",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.blumenliebe-ostsee.de/"
+      ],
+      "detail": "anbieter-blumenliebe.html"
+    },
+    {
+      "id": "bride-stories",
+      "name": "Bride Stories",
+      "region": "Rostock",
+      "address": "",
+      "phone": "",
+      "email": "",
+      "url": "https://www.bridestories.de/",
+      "services": [
+        "Brautmode",
+        "Abendkleider",
+        "Trauringe",
+        "Separate Anprobesuiten"
+      ],
+      "profileText": "Für die Brautkleidanprobe stehen drei unterschiedliche Suiten zur Verfügung. Die Räume werden während der Beratung für die Braut und ihre Begleitung genutzt. Zum Angebot gehören außerdem Abendkleider sowie Verlobungs- und Eheringe.",
+      "category": "Brautmode",
+      "description": "Brautmode · Abendkleider · Trauringe",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.bridestories.de/"
+      ],
+      "detail": "anbieter-bride-stories.html"
+    },
+    {
+      "id": "detailverliebt",
+      "name": "detailverliebt",
+      "region": "Rostock",
+      "address": "Warnowufer 61, 18057 Rostock",
+      "phone": "0172 3916338",
+      "email": "store@detailverliebt-rostock.de",
+      "url": "https://detailverliebt-rostock.de/",
+      "services": [
+        "A-Linie und figurbetonte Kleider",
+        "Mix & Match",
+        "Jumpsuits und kurze Kleider",
+        "Accessoires"
+      ],
+      "profileText": "Das Sortiment umfasst unterschiedliche Silhouetten bis zu Kombinationen aus einzelnen Teilen. Der Store arbeitet für Anpassungen mit externen Schneidereien; deren Kosten werden separat berechnet. Neben Beratungsterminen gibt es ausgewiesene Walk-in-Zeiten.",
+      "category": "Brautmode",
+      "description": "A-Linie und figurbetonte Kleider · Mix & Match · Jumpsuits und kurze Kleider",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://detailverliebt-rostock.de/"
+      ],
+      "detail": "anbieter-detailverliebt.html"
+    },
+    {
+      "id": "hafenblume",
+      "name": "Hafenblume Rostock",
+      "region": "Rostock",
+      "address": "Warnowufer 61, 18057 Rostock",
+      "phone": "0381 87394405",
+      "email": "hafenblume.rostock@gmail.com",
+      "url": "https://hafenblume-rostock.de/",
+      "services": [
+        "Hochzeitskonzepte",
+        "Beratung an der Location",
+        "Probegestecke",
+        "Anlieferung, Auf- und Abbau"
+      ],
+      "profileText": "Die Hafenblume bietet für Hochzeiten Konzepte mit Anlieferung sowie Auf- und Abbau an. Beratung ist auch an der gewünschten Location möglich; ein Probegesteck kann vereinbart werden. So lässt sich die Wirkung der Dekoration vorab besprechen.",
+      "category": "Floristik",
+      "description": "Hochzeitskonzepte · Beratung an der Location · Probegestecke",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://hafenblume-rostock.de/"
+      ],
+      "detail": "anbieter-hafenblume.html"
     },
     {
       "id": "hct",
@@ -40,6 +186,30 @@
       "checked": "2026-09-16"
     },
     {
+      "id": "hochzeitshaus",
+      "name": "HochzeitsHaus Rostock",
+      "region": "Rostock",
+      "address": "Lange Straße 15, 18055 Rostock",
+      "phone": "0381 2522677",
+      "email": "",
+      "url": "https://www.brautmoden-rostock.de/",
+      "services": [
+        "Brautkleider",
+        "Herrenmode",
+        "Abendmode",
+        "Hauseigene Schneiderei"
+      ],
+      "profileText": "Braut-, Herren- und Abendmode lassen sich hier zusammen mit den erforderlichen Änderungen planen. Das Haus stellt Kollektionen für 2027 und eine separate Musterkleidauswahl vor. Für die Anprobe wird eine vorherige Terminbuchung empfohlen.",
+      "category": "Brautmode",
+      "description": "Brautkleider · Herrenmode · Abendmode",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.brautmoden-rostock.de/"
+      ],
+      "detail": "anbieter-hochzeitshaus.html"
+    },
+    {
       "id": "zeitlos",
       "name": "Juwelier Zeitlos",
       "category": "Trauringe und Schmuck",
@@ -49,6 +219,64 @@
       "description": "Rostocker Juwelier mit Trauringen, Schmuck und Uhren. Klärt Material, Passform, Gravur und Liefertermin bei der Beratung.",
       "detail": "trauringe.html",
       "checked": "2026-09-16"
+    },
+    {
+      "id": "martens",
+      "name": "Martens & Martens",
+      "category": "Fotografie und Film",
+      "region": "Rostock",
+      "kind": "publisher",
+      "url": "https://www.hochzeitsfoto-rostock.de/",
+      "description": "Katrin Witt-Martens und Holger Martens begleiten Hochzeiten mit Fotografie und Film. Katrin ist zugleich Herausgeberin dieses Magazins.",
+      "detail": "fotografie-film.html",
+      "checked": "2026-09-16"
+    },
+    {
+      "id": "seemannsbraut",
+      "name": "Seemannsbraut",
+      "region": "Weiteres Umland",
+      "address": "Strandstraße 31, 18347 Wustrow",
+      "phone": "0176 63159246",
+      "email": "bwidling@gmail.com",
+      "url": "https://www.seemannsbraut.store/",
+      "services": [
+        "Brautkleider",
+        "Persönliche Stilberatung",
+        "Terminbuchung"
+      ],
+      "profileText": "Die Website nennt aktuell eine Adresse in Wustrow. Das Angebot reicht von figurbetonten Kleidern bis zu voluminösen Silhouetten. Für die Auswahl ist eine persönliche Terminvereinbarung möglich. Der Ort wurde gegenüber der ursprünglichen Vorschlagsliste korrigiert.",
+      "category": "Brautmode",
+      "description": "Brautkleider · Persönliche Stilberatung · Terminbuchung",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.seemannsbraut.store/"
+      ],
+      "detail": "anbieter-seemannsbraut.html"
+    },
+    {
+      "id": "wedding-loft",
+      "name": "The Wedding Loft",
+      "region": "Rostock",
+      "address": "Kröpeliner Straße 26, 18055 Rostock",
+      "phone": "",
+      "email": "info@wedding-loft.de",
+      "url": "https://www.wedding-loft.de/",
+      "services": [
+        "Outlet-Brautkleider",
+        "Anzüge und Maßanzüge",
+        "Trauringgestaltung",
+        "Direkt verfügbare Modelle"
+      ],
+      "profileText": "Der Store im Rostocker Hof kombiniert Outlet-Brautmode, Anzüge und Trauringe. Die Website nennt direkt mitnehmbare Modelle und private Beratungstermine. Verfügbare Größen und Bedingungen für die gewünschte Anprobe stehen im Buchungskalender.",
+      "category": "Brautmode",
+      "description": "Outlet-Brautkleider · Anzüge und Maßanzüge · Trauringgestaltung",
+      "kind": "editorial",
+      "checked": "2026-09-16",
+      "sources": [
+        "https://www.wedding-loft.de/"
+      ],
+      "detail": "anbieter-wedding-loft.html"
     }
   ]
 }

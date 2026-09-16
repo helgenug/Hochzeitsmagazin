@@ -1,0 +1,74 @@
+[
+  {
+    "id": "wandelbar",
+    "label": "01 / WANDELBARE LOOKS",
+    "title": "Ein Kleid. Mehr als ein Auftritt.",
+    "source": "https://www.barcelonabridalweek.com/bridal-trends-2027-what-the-bbfw26-runway-reveals/",
+    "sourceLabel": "Barcelona Bridal Fashion Week · Laufstegbericht 2027",
+    "evidence": "Abnehmbare Ärmel, Überröcke und zusätzliche Lagen gehören zu den im April 2026 gezeigten Ansätzen für 2027. Ein Grundkleid kann so mehrere Auftritte ermöglichen.",
+    "tip": "Probiert bei der Anprobe beide Varianten. Wer hilft beim Umbau? Wohin mit dem Überrock? Ein Wechsel funktioniert im Alltag nur, wenn Verschlüsse, Bewegungsfreiheit und Aufbewahrung mitgedacht sind.",
+    "link": "dienstleister.html?category=Brautmode#verzeichnis",
+    "linkLabel": "Brautmode in der Region",
+    "tone": "sand"
+  },
+  {
+    "id": "silhouette",
+    "label": "02 / SILHOUETTEN",
+    "title": "Die Taille wandert tiefer.",
+    "source": "https://www.barcelonabridalweek.com/bridal-trends-2027-what-the-bbfw26-runway-reveals/",
+    "sourceLabel": "Barcelona Bridal Fashion Week · Laufstegbericht 2027",
+    "evidence": "Tief angesetzte Taillen und neu interpretierte Korsagen setzen in den vorgestellten Kollektionen andere Proportionen. Dazu kommen sowohl fließende als auch bewusst voluminöse Röcke.",
+    "tip": "Vergleicht eine tiefe mit einer natürlichen Taille im selben Termin. Setzt euch hin und geht ein paar Schritte. Ein markanter Schnitt soll euch durch den Tag begleiten können.",
+    "link": "ratgeber-brautkleid.html",
+    "linkLabel": "Die Anprobe vorbereiten",
+    "tone": "blue"
+  },
+  {
+    "id": "bluetendetails",
+    "label": "03 / FLORALE DETAILS",
+    "title": "Blüten werden dreidimensional.",
+    "source": "https://www.barcelonabridalweek.com/bridal-trends-2027-what-the-bbfw26-runway-reveals/",
+    "sourceLabel": "Barcelona Bridal Fashion Week · Laufstegbericht 2027",
+    "evidence": "Florale Applikationen, Stickereien und handgemalte Blüten bringen Struktur auf Kleider. Auch Capes und auffällige Kopfbedeckungen ergänzen den klassischen Schleier.",
+    "tip": "Wenn das Kleid viele Details trägt, testet den Look zunächst mit schlichtem Schmuck. Betrachtet Applikationen aus der Nähe und aus einigen Metern Entfernung: Die Wirkung kann deutlich anders sein.",
+    "link": "ratgeber-blumen.html",
+    "linkLabel": "Blumen und Gesamtbild planen",
+    "tone": "rose"
+  },
+  {
+    "id": "struktur",
+    "label": "04 / MATERIAL",
+    "title": "Struktur trifft Leichtigkeit.",
+    "source": "https://www.pronovias.com/editorial/in-harmony-preview-2027",
+    "sourceLabel": "Pronovias · In Harmony, Preview 2027",
+    "evidence": "Pronovias verbindet in seiner Preview 2027 Korsagenkonstruktion mit fließenden Drapierungen. Mikroplissierter Organza und kristalline Details setzen Akzente. Das ist ein konkretes Kollektionsbeispiel, keine Aussage über alle Brautkleider.",
+    "tip": "Seht euch Stoffe bei Tageslicht an. Lasst euch erklären, wie Unterfütterung und Änderungen die Transparenz beeinflussen. Entscheidend ist die Wirkung am Körper, nicht nur auf einem Laufstegfoto.",
+    "link": "dienstleister.html?category=Brautmode#verzeichnis",
+    "linkLabel": "Anlaufstellen für die Anprobe",
+    "tone": "ivory"
+  },
+  {
+    "id": "persoenlich",
+    "label": "05 / FEIERKULTUR",
+    "title": "Persönlicher statt nach Vorlage.",
+    "source": "https://www.theknot.com/content/wedding-data-insights/real-weddings-study?s_id=366997236",
+    "sourceLabel": "The Knot · Real Weddings Study 2026, USA",
+    "evidence": "Die US-Befragung zu Hochzeiten 2025 und der Ausblick auf 2026 beschreiben eine stärkere Ausrichtung an persönlichen Vorstellungen. Diese Beobachtung ist ein internationaler Impuls und keine repräsentative Aussage über Deutschland.",
+    "tip": "Wählt gemeinsam drei Dinge, die euch wirklich wichtig sind. Baut euren Ablauf darum auf. Eine gemeinsame Lieblingsspeise oder eine persönliche Musikauswahl kann mehr erzählen als ein zusätzlicher Programmpunkt.",
+    "link": "planen.html#ablauf",
+    "linkLabel": "Euren Tagesablauf planen",
+    "tone": "blue"
+  },
+  {
+    "id": "blitz",
+    "label": "06 / BILDER & PARTY",
+    "title": "Direkter Blitz. Spontane Energie.",
+    "source": "https://images.theknot.com/rules/2026/the-knot-real-weddings-study-data-read-out-2026.pdf",
+    "sourceLabel": "The Knot · Wedding Forecast 2026, USA",
+    "evidence": "Der Ausblick nennt spontane Blitzfotografie und mehrere Outfitwechsel als aufkommende Wünsche. Gemeint ist eine beobachtete Tendenz aus dem US-Markt, kein Pflichtprogramm für eure Hochzeit.",
+    "tip": "Besprecht anhand vollständiger Reportagen, welche Bildsprache euch gefällt. Direkter Blitz kann zur Party passen; für die Trauung und ruhige Momente darf die Bildgestaltung eine andere sein.",
+    "link": "ratgeber-fotografie.html",
+    "linkLabel": "Fotografie und Film planen",
+    "tone": "rose"
+  }
+]

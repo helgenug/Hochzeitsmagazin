@@ -1,33 +1,397 @@
 [
   {
-    "id": "rostock",
-    "name": "Standesamt Rostock",
-    "region": "Rostock",
-    "type": "Standesämter",
-    "town": "Rostock",
-    "description": "Die städtische Anlaufstelle für Anmeldung und Fragen zur Eheschließung. Prüft verfügbare Trauorte und Termine direkt beim Standesamt.",
-    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessungen/251454",
-    "water": false,
-    "stay": false,
+    "id": "blaue-boje",
+    "name": "Blaue Boje",
+    "region": "Warnemünde & Ostsee",
+    "type": "Strandlocations",
+    "town": "Markgrafenheide",
+    "description": "Strandrestaurant mit standesamtlichem Trauort für bis zu 30 Gäste.",
+    "url": "https://blaue-boje.de/ihre-feier/",
+    "water": true,
+    "stay": true,
     "ceremony": "standesamtlich",
     "checked": "2026-09-16",
     "kind": "editorial",
-    "size": null
+    "size": null,
+    "address": "Budentannenweg 10, 18146 Rostock-Markgrafenheide",
+    "facts": [
+      [
+        "Trauung",
+        "bis 30 Gäste"
+      ],
+      [
+        "Lage",
+        "Strandresort Markgrafenheide"
+      ]
+    ],
+    "profileText": "Die Traukapazität beschreibt die Zeremonie, nicht die anschließende Restaurantfeier.",
+    "sources": [
+      "https://blaue-boje.de/ihre-feier/",
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "detail": "ort-blaue-boje.html"
   },
   {
-    "id": "kuehlungsborn",
-    "name": "Standesamt Kühlungsborn",
-    "region": "Kühlungsborn",
-    "type": "Standesämter",
-    "town": "Kühlungsborn",
-    "description": "Das Trauzimmer der Stadt liegt an der Ostseeallee. Eine Terminreservierung und die förmliche Anmeldung sind getrennte Schritte.",
-    "url": "https://www.stadt-kuehlungsborn.de/standesamt",
+    "id": "chalet-o",
+    "name": "Chalet O",
+    "town": "Rostock",
+    "address": "Neptunallee 7 f, 18057 Rostock",
+    "size": 30,
+    "description": "Altholz und Kamin nahe der Warnow.",
+    "profileText": "Termine und Gästezahl mit dem Standesamt abstimmen.",
+    "facts": [
+      [
+        "Gäste bei der Trauung",
+        "bis 30"
+      ],
+      [
+        "Zugang",
+        "Aufzug zum Trauraum"
+      ]
+    ],
+    "region": "Rostock",
+    "type": "Trauorte",
+    "water": false,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "detail": "ort-chalet-o.html"
+  },
+  {
+    "id": "heiligendamm",
+    "name": "Grand Hotel Heiligendamm",
+    "region": "Bad Doberan & Heiligendamm",
+    "type": "Hotels",
+    "town": "Heiligendamm",
+    "description": "Standesamtliche Trauung, historischer Ballsaal und Hotelaufenthalt direkt an der Ostsee.",
+    "url": "https://www.grandhotel-heiligendamm.de/hochzeiten/",
+    "water": true,
+    "stay": true,
+    "ceremony": "standesamtlich",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "email": "Bankett@grandhotel-heiligendamm.de",
+    "phone": "038203 7406190",
+    "facts": [
+      [
+        "Trauung",
+        "Außenstelle des Standesamts"
+      ],
+      [
+        "Feier",
+        "Historischer Ballsaal und weitere Bereiche"
+      ],
+      [
+        "Küche",
+        "Menüplanung und hauseigene Konditorei"
+      ],
+      [
+        "Gestaltung",
+        "Hauseigene Floristik"
+      ]
+    ],
+    "profileText": "Das Grand Hotel verbindet die Feier mit Übernachtungen im Hotelensemble. Die Bankettabteilung koordiniert Räume und kulinarisches Angebot; Floristik und Konditorei befinden sich im Haus. Auch Transfers werden als organisierbare Leistung genannt. Das erleichtert die Abstimmung mehrerer Bestandteile über einen Ansprechpartner.",
+    "detail": "ort-heiligendamm.html",
+    "sources": [
+      "https://www.grandhotel-heiligendamm.de/hochzeiten/"
+    ]
+  },
+  {
+    "id": "gerdshagen",
+    "name": "Gut Gerdshagen",
+    "region": "Landkreis Rostock",
+    "type": "Gutshäuser",
+    "town": "Gerdshagen bei Satow",
+    "description": "Feiern im Alten Pferdestall, Empfang im Gutspark und Trauung im Freien oder im Kutscherstall.",
+    "url": "https://www.gut-gerdshagen.de/feste/hochzeiten-1/",
+    "water": false,
+    "stay": true,
+    "ceremony": "",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "facts": [
+      [
+        "Feier",
+        "bis zu 120 Personen laut Anbieter"
+      ],
+      [
+        "Innenbereiche",
+        "Alter Pferdestall, Fohlenstall, Kutscherstall"
+      ],
+      [
+        "Draußen",
+        "Park und Garten"
+      ],
+      [
+        "Aufenthalt",
+        "Ferienwohnungen"
+      ]
+    ],
+    "profileText": "Der Gutshof teilt den Hochzeitstag auf unterschiedliche Bereiche auf: Zeremonie, Empfang, Kaffeezeit und Abendfeier können ihren eigenen Platz bekommen. Der Alte Pferdestall wird als flexibel gestaltbare Scheune vorgestellt. Die Website enthält auch ältere Anfragehinweise; aktuelle Buchbarkeit deshalb unmittelbar beim Gut bestätigen lassen.",
+    "mm": "https://www.hochzeitsfoto-rostock.de/gut-gerdshagen",
+    "detail": "ort-gerdshagen.html",
+    "sources": [
+      "https://www.gut-gerdshagen.de/feste/hochzeiten-1/"
+    ]
+  },
+  {
+    "id": "hellingkran",
+    "name": "Hellingkran",
+    "town": "Rostock",
+    "address": "Hellingstraße 3 a, 18057 Rostock",
+    "size": 30,
+    "description": "Trauraum im ehemaligen Maschinenraum über der Warnow.",
+    "profileText": "Termine und Gästezahl mit dem Standesamt abstimmen.",
+    "facts": [
+      [
+        "Gäste bei der Trauung",
+        "bis 30"
+      ],
+      [
+        "Zugang",
+        "Aufzug zum Trauraum"
+      ]
+    ],
+    "region": "Rostock",
+    "type": "Trauorte",
+    "water": true,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "detail": "ort-hellingkran.html"
+  },
+  {
+    "id": "samow",
+    "name": "Herrenhaus Samow",
+    "region": "Landkreis Rostock",
+    "type": "Gutshäuser",
+    "town": "Samow",
+    "description": "Herrenhaus im Landschaftspark mit Ferienwohnungen und Außenstelle des Standesamts Gnoien.",
+    "url": "https://www.herrenhaussamow.de/",
+    "water": false,
+    "stay": true,
+    "ceremony": "standesamtlich",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "address": "Samow 14, 17179 Behren-Lübchin",
+    "email": "info@herrenhaussamow.de",
+    "phone": "039971 13505",
+    "facts": [
+      [
+        "Aufenthalt",
+        "9 Ferienwohnungen und 2 Ferienhäuser"
+      ],
+      [
+        "Trauung",
+        "Außenstelle des Standesamts Gnoien"
+      ],
+      [
+        "Saison laut Haus",
+        "1. Mai bis 30. September"
+      ]
+    ],
+    "profileText": "Im Herrenhaus liegen Ferienwohnungen mit unterschiedlichen Größen. Zwei Ferienhäuser ergänzen das Angebot auf dem Gelände. Für den Ablauf einer Hochzeit stellt das Haus eine eigene Hochzeitsmappe bereit. Damit ist Samow eine Anlaufstelle für ein Fest mit gemeinsamem Aufenthalt.",
+    "mm": "https://www.hochzeitsfoto-rostock.de/herrenhaus-samow",
+    "detail": "ort-samow.html",
+    "sources": [
+      "https://www.herrenhaussamow.de/"
+    ]
+  },
+  {
+    "id": "neptun",
+    "name": "Hotel Neptun",
+    "region": "Warnemünde & Ostsee",
+    "type": "Hotels",
+    "town": "Warnemünde",
+    "description": "Hochzeitsfeier mit Meerblick, Strandzeremonie und Hochzeitssuite in Warnemünde.",
+    "url": "https://www.hotel-neptun.de/erleben/tagungen-feiern/Hochzeiten/",
+    "water": true,
+    "stay": true,
+    "ceremony": "",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "address": "Seestraße 19, 18119 Rostock-Warnemünde",
+    "facts": [
+      [
+        "Lage",
+        "Warnemünder Strand"
+      ],
+      [
+        "Feier",
+        "Räume mit Meerblick"
+      ],
+      [
+        "Aufenthalt",
+        "Hotelzimmer und Hochzeitssuite"
+      ]
+    ],
+    "profileText": "Das Hotel stellt verschiedene Stationen einer Hochzeit vor: eine Zeremonie am Strand, die dekorierte Tafel und eine Abendveranstaltung mit Meerblick. Eine Hochzeitssuite ergänzt die Feier. Für die gewünschte Gesellschaftsgröße und die konkrete Trauungsform ist ein individuelles Angebot nötig.",
+    "mm": "https://www.hochzeitsfoto-rostock.de/hotel-neptun",
+    "detail": "ort-neptun.html",
+    "sources": [
+      "https://www.hotel-neptun.de/erleben/tagungen-feiern/Hochzeiten/"
+    ]
+  },
+  {
+    "id": "gelbensande",
+    "name": "Jagdschloss Gelbensande",
+    "region": "Landkreis Rostock",
+    "type": "Schlösser",
+    "town": "Gelbensande",
+    "description": "Historisches Jagdschloss mit eigenem Angebot für Hochzeiten und Firmenfeiern.",
+    "url": "https://www.jagdschloss-gelbensande.de/",
     "water": false,
     "stay": false,
     "ceremony": "standesamtlich",
     "checked": "2026-09-16",
     "kind": "editorial",
-    "size": null
+    "size": null,
+    "address": "Am Schloss 1, 18182 Gelbensande",
+    "facts": [
+      [
+        "Architektur",
+        "Ehemalige großherzogliche Sommerresidenz"
+      ],
+      [
+        "Nutzung",
+        "Trauungen und Feiern"
+      ],
+      [
+        "Anschrift",
+        "Am Schloss 1, Gelbensande"
+      ]
+    ],
+    "profileText": "Das im 19. Jahrhundert errichtete Jagdschloss wird heute für Hochzeiten und Veranstaltungen genutzt. Der Anbieter führt separate Bereiche zu Feiern und Übernachtung auf seiner Website. Räume, Gästezahl und konkrete Unterkunftsmöglichkeiten sind dort für den gewünschten Termin abzustimmen.",
+    "detail": "ort-gelbensande.html",
+    "sources": [
+      "https://www.jagdschloss-gelbensande.de/"
+    ]
+  },
+  {
+    "id": "kurhaus",
+    "name": "Kurhaus Warnemünde",
+    "region": "Warnemünde & Ostsee",
+    "type": "Maritime Locations",
+    "town": "Warnemünde",
+    "description": "Bankettsaal mit Wintergarten, Wellenrausch und Meerterrassen: Feiern direkt an der Warnemünder Promenade.",
+    "url": "https://kurhaus-warnemuende.de/location/hochzeit",
+    "water": true,
+    "stay": false,
+    "ceremony": "frei",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "email": "post@kurhaus-warnemuende.de",
+    "phone": "0152 05216107",
+    "facts": [
+      [
+        "Bankettsaal",
+        "bis 220 Personen · 381 m²"
+      ],
+      [
+        "Wellenrausch",
+        "bis 70 Personen · 183 m²"
+      ],
+      [
+        "Paulo Scutarro",
+        "bis 100 Personen · 183 m²"
+      ],
+      [
+        "Übernachtung",
+        "Nicht im Haus"
+      ]
+    ],
+    "profileText": "Das Kurhaus verbindet mehrere Räume mit unterschiedlichen Größen. Freie Zeremonien sind unter anderem auf den Meerterrassen möglich. Die Website nennt für kombinierte Bereiche bis zu 320 Personen auf einer und bis zu 450 auf zwei Ebenen. Diese Gesamtwerte sind nicht die Kapazität eines einzelnen Saals. Für die Auswahl sind Bestuhlung, Tanzfläche und Wetteralternative entscheidend.",
+    "detail": "ort-kurhaus.html",
+    "sources": [
+      "https://kurhaus-warnemuende.de/location/hochzeit"
+    ]
+  },
+  {
+    "id": "ostseestadion",
+    "name": "Ostseestadion",
+    "town": "Rostock",
+    "address": "Kopernikusstraße 17, 18057 Rostock",
+    "size": 15,
+    "description": "Trauung in der Doppelloge mit Blick ins Stadion.",
+    "profileText": "Termine und Gästezahl mit dem Standesamt abstimmen.",
+    "facts": [
+      [
+        "Gäste bei der Trauung",
+        "bis 15"
+      ],
+      [
+        "Zugang",
+        "Fahrstuhl zum Trauraum"
+      ]
+    ],
+    "region": "Rostock",
+    "type": "Trauorte",
+    "water": false,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "detail": "ort-ostseestadion.html"
+  },
+  {
+    "id": "gamehl",
+    "name": "Schloss Gamehl",
+    "region": "Weiteres Umland",
+    "type": "Schlösser",
+    "town": "Gamehl bei Wismar",
+    "description": "Standesamt im Blauen Salon, Trauung auf der Parkinsel und Feier im Großen Saal.",
+    "url": "https://www.schloss-gamehl.de/hochzeit/",
+    "water": false,
+    "stay": true,
+    "ceremony": "standesamtlich frei",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "email": "info@schloss-gamehl.de",
+    "phone": "038426 22000",
+    "facts": [
+      [
+        "Blauer Salon",
+        "ca. 40 Gäste bei der Trauung"
+      ],
+      [
+        "Zeremonie",
+        "Standesamtlich und frei"
+      ],
+      [
+        "Feier",
+        "Großer Saal und Terrasse"
+      ],
+      [
+        "Aufenthalt",
+        "Zimmer und Suiten"
+      ]
+    ],
+    "profileText": "Schloss Gamehl bietet ein Arrangement zur exklusiven Nutzung des Hauses. Der Blaue Salon und nach Angaben des Hauses auch die Parkinsel stehen für standesamtliche Trauungen zur Verfügung. Für freie Zeremonien werden weitere Plätze im Gutspark beschrieben. Hotelbuchung und standesamtlichen Termin getrennt abstimmen.",
+    "mm": "https://www.hochzeitsfoto-rostock.de/schloss-gamehl",
+    "detail": "ort-gamehl.html",
+    "sources": [
+      "https://www.schloss-gamehl.de/hochzeit/"
+    ]
   },
   {
     "id": "doberan",
@@ -42,7 +406,147 @@
     "ceremony": "standesamtlich",
     "checked": "2026-09-16",
     "kind": "editorial",
-    "size": null
+    "size": null,
+    "detail": "ort-doberan.html",
+    "sources": [
+      "https://www.stadt-bad-doberan.de/aemter/standesamt"
+    ],
+    "facts": [
+      [
+        "Region",
+        "Bad Doberan & Heiligendamm"
+      ],
+      [
+        "Trauung",
+        "Standesamtlich"
+      ]
+    ],
+    "profileText": "Zuständig für Bad Doberan und das Amt Bad Doberan-Land. Für eine Trauung im Grand Hotel verweist die Stadt auf die Abstimmung mit dem Hotel."
+  },
+  {
+    "id": "kuehlungsborn",
+    "name": "Standesamt Kühlungsborn",
+    "region": "Kühlungsborn",
+    "type": "Standesämter",
+    "town": "Kühlungsborn",
+    "description": "Das Trauzimmer der Stadt liegt an der Ostseeallee. Eine Terminreservierung und die förmliche Anmeldung sind getrennte Schritte.",
+    "url": "https://www.stadt-kuehlungsborn.de/standesamt",
+    "water": false,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "detail": "ort-kuehlungsborn.html",
+    "sources": [
+      "https://www.stadt-kuehlungsborn.de/standesamt"
+    ],
+    "facts": [
+      [
+        "Region",
+        "Kühlungsborn"
+      ],
+      [
+        "Trauung",
+        "Standesamtlich"
+      ]
+    ],
+    "profileText": "Das Trauzimmer der Stadt liegt an der Ostseeallee. Eine Terminreservierung und die förmliche Anmeldung sind getrennte Schritte."
+  },
+  {
+    "id": "rostock",
+    "name": "Standesamt Rostock",
+    "region": "Rostock",
+    "type": "Standesämter",
+    "town": "Rostock",
+    "description": "Kerkhoffhaus: großer Trausaal für bis zu 30, kleiner für bis zu 17 Gäste.",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessungen/251454",
+    "water": false,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "size": null,
+    "address": "Hinter dem Rathaus 5, 18055 Rostock",
+    "phone": "0381 3811467",
+    "email": "ehe@rostock.de",
+    "facts": [
+      [
+        "Trauung",
+        "Standesamtlich"
+      ],
+      [
+        "Räume",
+        "Großer und kleiner Saal im Erdgeschoss"
+      ]
+    ],
+    "profileText": "Terminreservierung online; verbindlich wird der Termin erst nach bestätigter Anmeldung.",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "detail": "ort-rostock.html"
+  },
+  {
+    "id": "villa-papendorf",
+    "name": "Villa Papendorf",
+    "town": "Papendorf",
+    "address": "Alte Ziegelei 1, 18059 Papendorf",
+    "size": 30,
+    "description": "Standesamtliche Zeremonie in einer Jugendstilvilla.",
+    "profileText": "Termine und Gästezahl mit dem Standesamt abstimmen.",
+    "facts": [
+      [
+        "Gäste bei der Trauung",
+        "bis 30"
+      ],
+      [
+        "Zugang",
+        "Zugänglichkeit vorab abstimmen"
+      ]
+    ],
+    "region": "Landkreis Rostock",
+    "type": "Trauorte",
+    "water": false,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "detail": "ort-villa-papendorf.html"
+  },
+  {
+    "id": "vogtei",
+    "name": "Vogtei Warnemünde",
+    "town": "Warnemünde",
+    "address": "Am Strom 59, 18119 Rostock-Warnemünde",
+    "size": 30,
+    "description": "Trauraum im Dachgeschoss direkt am Alten Strom.",
+    "profileText": "Termine und Gästezahl mit dem Standesamt abstimmen.",
+    "facts": [
+      [
+        "Gäste bei der Trauung",
+        "bis 30"
+      ],
+      [
+        "Zugang",
+        "Zugänglichkeit vorab abstimmen"
+      ]
+    ],
+    "region": "Warnemünde & Ostsee",
+    "type": "Trauorte",
+    "water": true,
+    "stay": false,
+    "ceremony": "standesamtlich",
+    "url": "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461",
+    "sources": [
+      "https://rathaus.rostock.de/de/service/aemter/stadtamt/standesamt/eheschliessung_termine_und_reservierung/251461"
+    ],
+    "checked": "2026-09-16",
+    "kind": "editorial",
+    "detail": "ort-vogtei.html"
   },
   {
     "id": "hohe-duene",
@@ -50,133 +554,32 @@
     "region": "Warnemünde & Ostsee",
     "type": "Hotels",
     "town": "Rostock-Hohe Düne",
-    "description": "Hotel am Yachthafen mit Zimmern und Veranstaltungsbereichen. Für die Planung von Feier und Aufenthalt lohnt eine gemeinsame Anfrage.",
+    "description": "Hotel am Yachthafen mit Restaurants, Veranstaltungsbereichen und Zimmern für einen gemeinsamen Aufenthalt.",
     "url": "https://www.hohe-duene.de/",
     "water": true,
     "stay": true,
     "ceremony": "",
     "checked": "2026-09-16",
     "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "kurhaus",
-    "name": "Kurhaus Warnemünde",
-    "region": "Warnemünde & Ostsee",
-    "type": "Maritime Locations",
-    "town": "Warnemünde",
-    "description": "Das Kurhaus bietet Hochzeitsfeiern in Warnemünde an. Besprecht den passenden Raum, die Wege zur Feier und eine Alternative für schlechtes Wetter.",
-    "url": "https://kurhaus-warnemuende.de/location/hochzeit",
-    "water": true,
-    "stay": false,
-    "ceremony": "",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "heiligendamm",
-    "name": "Grand Hotel Heiligendamm",
-    "region": "Bad Doberan & Heiligendamm",
-    "type": "Hotels",
-    "town": "Heiligendamm",
-    "description": "Das Hotel verbindet Übernachtungen mit Räumen für Hochzeiten und nennt die Möglichkeit einer standesamtlichen Trauung. Termine gesondert abstimmen.",
-    "url": "https://www.grandhotel-heiligendamm.de/hochzeiten/",
-    "water": true,
-    "stay": true,
-    "ceremony": "standesamtlich",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "neptun",
-    "name": "Hotel Neptun",
-    "region": "Warnemünde & Ostsee",
-    "type": "Hotels",
-    "town": "Warnemünde",
-    "description": "Hochzeitsfeiern und Übernachtung in Warnemünde. Fragt nach den Räumen für euren Ablauf und danach, wie sich ein Empfang am Strand organisieren lässt.",
-    "url": "https://www.hotel-neptun.de/erleben/tagungen-feiern/Hochzeiten/",
-    "water": true,
-    "stay": true,
-    "ceremony": "",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "blaue-boje",
-    "name": "Blaue Boje",
-    "region": "Warnemünde & Ostsee",
-    "type": "Strandlocations",
-    "town": "Markgrafenheide",
-    "description": "Das Strandrestaurant bietet private Feiern an. Ein Einstieg für Paare, die eine Feier an der Küste planen und die Abläufe mit dem Restaurant abstimmen möchten.",
-    "url": "https://blaue-boje.de/ihre-feier/",
-    "water": true,
-    "stay": true,
-    "ceremony": "standesamtlich",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "gelbensande",
-    "name": "Jagdschloss Gelbensande",
-    "region": "Landkreis Rostock",
-    "type": "Schlösser",
-    "town": "Gelbensande",
-    "description": "Das Schloss ist ein Ort für Hochzeiten und Feiern. Informationen zur standesamtlichen Trauung stellt außerdem das Amt Rostocker Heide bereit.",
-    "url": "https://www.jagdschloss-gelbensande.de/",
-    "water": false,
-    "stay": false,
-    "ceremony": "standesamtlich",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "gerdshagen",
-    "name": "Gut Gerdshagen",
-    "region": "Landkreis Rostock",
-    "type": "Gutshäuser",
-    "town": "Gerdshagen bei Satow",
-    "description": "Das Gut stellt Möglichkeiten für Hochzeiten und Ferienaufenthalte vor. Fragt für einen gemeinsamen Aufenthalt nach verfügbaren Unterkünften und Feierbereichen.",
-    "url": "https://www.gut-gerdshagen.de/feste/hochzeiten-1/",
-    "water": false,
-    "stay": true,
-    "ceremony": "",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "samow",
-    "name": "Herrenhaus Samow",
-    "region": "Landkreis Rostock",
-    "type": "Gutshäuser",
-    "town": "Samow",
-    "description": "Ein Herrenhaus mit Landschaftspark in der Mecklenburgischen Schweiz. Hochzeitsarrangements und Ferienunterkünfte werden auf der Website vorgestellt.",
-    "url": "https://www.herrenhaussamow.de/",
-    "water": false,
-    "stay": true,
-    "ceremony": "",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
-  },
-  {
-    "id": "gamehl",
-    "name": "Schloss Gamehl",
-    "region": "Weiteres Umland",
-    "type": "Schlösser",
-    "town": "Gamehl bei Wismar",
-    "description": "Das Haus beschreibt standesamtliche und freie Trauungen im Schloss und Park. Interessant, wenn Zeremonie und Feier an einem Ort stattfinden sollen.",
-    "url": "https://www.schloss-gamehl.de/hochzeit/",
-    "water": false,
-    "stay": true,
-    "ceremony": "standesamtlich frei",
-    "checked": "2026-09-16",
-    "kind": "editorial",
-    "size": null
+    "size": null,
+    "facts": [
+      [
+        "Aufenthalt",
+        "368 Zimmer und Suiten im Resort"
+      ],
+      [
+        "Umgebung",
+        "Strand und Marina"
+      ],
+      [
+        "Veranstaltungen",
+        "Kongresszentrum und Bootshalle"
+      ]
+    ],
+    "profileText": "Die Yachthafenresidenz liegt auf der östlichen Seite der Warnowmündung. Die Anlage verbindet Hotel, Gastronomie und Veranstaltungsbereiche. Die genannte Zimmerzahl beschreibt das gesamte Resort, kein reserviertes Hochzeitskontingent. Für eine Feier sollten Raum, Ablauf und Zimmerangebot gemeinsam angefragt werden.",
+    "detail": "ort-hohe-duene.html",
+    "sources": [
+      "https://www.hohe-duene.de/"
+    ]
   }
 ]
