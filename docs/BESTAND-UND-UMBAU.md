@@ -1,0 +1,14 @@
+# Bestandsaufnahme und Umbauplan – 16.09.2026
+
+Ausgangslage: fünf statische HTML-Dateien (index, trends, trauorte, faq, kontakt), inline CSS/JavaScript, Tailwind via CDN, FontAwesome und externe Google Fonts. Kein package.json, kein Paketmanager, keine Lockdatei und kein Git-Verzeichnis vorhanden. git status vor dem Umbau geprüft; nicht möglich. Sicherung der fünf Originaldateien in work/original-2026-09-16. Sechs eigene Rasterbilder bleiben unverändert. teaser2.jpg ist das einzige Hochzeitsmotiv, die übrigen Bilder sind Porträts/Dubletten. Ein lokales Mediadaten-PDF 2026 und drei externe Magazinausgaben 2023–2025.
+
+Vorhanden: Hauptteaser, Herausgeberin, Fotografie, Themenmodale (Locations, Styling-Interview, Trauringe), Trends, Trauorte, FAQ und Anzeigenformular. Formspree-Endpunkt /f/mlgplzzg, Honeypot und Datenschutzcheckbox sind vorhanden. Navigation mehrfach kopiert; mobile Menüs, FAQ-Akkordeon und Modale ohne ausreichendes Fokusmanagement. Rechtstexte nur in Modalen der Startseite; Unterseiten ohne direkte Zugänge. SEO und strukturierte Daten vorhanden, teils mit nicht belegten Angaben (z. B. Veranstalterzuordnung). Keine Sitemap oder robots.txt. Keine bestätigten gebuchten digitalen Anzeigen.
+
+Plan: statische Mehrseitenarchitektur und URLs erhalten; gemeinsam gepflegte Navigation, Design und JavaScript; bestehende Inhalte redaktionell überarbeiten, Interviews und Rechtstexte bewahren; zusätzliche Rubriken für Planung, Magazin, Verzeichnis, Messe, Fotografie, Herausgeberin, Print und Partner. Strukturierte Konfiguration für Veranstaltung, Anbieter, Orte und Werbung. Keine neuen Konten oder Drittdienste. Lokale Systemschriften statt Google Fonts, browserseitige CDN-Gestaltung durch lokale Styles ersetzen. Kein Framework und keine Paketinstallation.
+
+Gestaltung: marineblaue Editorial-Typografie, Weiß, feine Linien und Sandakzent; eigener großer Hauptteaser bleibt. Asymmetrische Magazinübersicht, großzügige Textspalten, sachliche Verzeichnisse. Smartphone, Tablet und Desktop prüfen.
+
+Offene Inhalte: freigegebene vollständige Hochzeitsreportagen und weitere eigene Motivbilder, neue Dienstleister, bestätigte Partnerverträge und Anzeigenmotive. Rechtstexte enthalten Hinweise auf Analytics, Maps, soziale Plugins, alte Rechtsverweise und ODR; im Bestand ist dafür nicht durchgehend eine entsprechende Integration sichtbar. Keine juristische Neubearbeitung. Formspree-Nennung und tatsächliche Datenverarbeitung fachlich prüfen lassen.
+
+## Nachtrag: Rechtsupdate vom 16.09.2026
+Die zunächst unverändert übernommenen Rechtstexte wurden anschließend auf ausdrücklichen Wunsch aktualisiert. Maßgeblich: data/impressum.html und data/datenschutz.html. Cookie-Einstellungen sind lokal implementiert; Google Analytics ist nicht aktiv. Vollständige heutige Änderungsliste, Quellen und offene rechtliche Betriebsangaben: AENDERUNGEN-2026-09-16.md im Projektstamm.
