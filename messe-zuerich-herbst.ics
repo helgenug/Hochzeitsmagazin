@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:zuerich-herbst-2026-10-17@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261019
+SUMMARY:TrauDich! Zürich
+LOCATION:Halle 622\, Zürich-Oerlikon
+URL:https://traudich.ch/hochzeitsmesse-zuerich/
+END:VEVENT
+END:VCALENDAR

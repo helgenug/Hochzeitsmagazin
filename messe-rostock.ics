@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:rostock-2027-01-30@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270201
+SUMMARY:HochzeitsMesse Rostock
+LOCATION:HanseMesse Rostock
+URL:https://www.hochzeitsmesse-rostock.de/
+END:VEVENT
+END:VCALENDAR

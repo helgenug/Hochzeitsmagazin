@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:rom-2026-10-30@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261102
+SUMMARY:RomaSposa
+LOCATION:Roma Convention Center La Nuvola\, Viale Asia 40–44
+URL:https://www.romasposa.it/
+END:VEVENT
+END:VCALENDAR

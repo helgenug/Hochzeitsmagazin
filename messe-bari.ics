@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:bari-2026-11-05@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261109
+SUMMARY:Promessi Sposi
+LOCATION:Nuovo Padiglione\, Fiera del Levante
+URL:https://www.promessisposi.info/
+END:VEVENT
+END:VCALENDAR

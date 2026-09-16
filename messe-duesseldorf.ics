@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:duesseldorf-2027-01-09@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270111
+SUMMARY:TrauDich! Düsseldorf
+LOCATION:Areal Böhler
+URL:https://traudich.de/
+END:VEVENT
+END:VCALENDAR

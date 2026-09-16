@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeitsmagazin Rostock//Messen//DE
+BEGIN:VEVENT
+UID:muenchen-2026-10-17@hochzeitsmagazin-rostock.de
+DTSTAMP:20260916T100000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261019
+SUMMARY:TrauDich! München
+LOCATION:MTC – world of fashion\, Ingolstädter Straße 47\, München
+URL:https://traudich.de/hochzeitsmesse-muenchen/
+END:VEVENT
+END:VCALENDAR
