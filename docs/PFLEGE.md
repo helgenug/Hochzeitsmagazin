@@ -1,5 +1,7 @@
 # Pflege und lokale Vorschau
 
+**Neu seit 31.10.2026 (Entscheidung Holger):** Gepflegt wird nur noch über GitHub. Die fertigen HTML-Seiten im Repository sind die Quelle und werden direkt bearbeitet. Der Generator `work/build.cjs` auf Holgers Rechner wird nicht mehr benutzt, weil er Änderungen im Repository überschreiben würde. Jede Änderung an `main` geht über Vercel sofort live auf hochzeitsmagazin-rostock.de, deshalb erst in einem Zweig arbeiten und nach Holgers GO übernehmen. Die Abschnitte unten beschreiben den früheren Stand.
+
 Die Website bleibt eine statische Mehrseitenwebsite. Kein Framework, keine Pakete, keine Lockdatei. Alle Originalbilder und das lokale Mediadaten-PDF bleiben unverändert. Keine Veröffentlichung und keine Git-Commits.
 
 ## Vorschau
