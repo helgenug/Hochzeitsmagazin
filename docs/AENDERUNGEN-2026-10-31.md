@@ -1,6 +1,6 @@
 # Änderungen am 31. Oktober 2026
 
-Verknüpfung mit der neuen Website von Martens & Martens (hochzeitsfoto-rostock.de), damit sich beide Seiten bei Google und KI-Systemen gegenseitig stärken. Gearbeitet im Zweig `claude/verknuepfung-fotoseite`, live erst nach Holgers GO. Neue Sätze sind Entwürfe zur Freigabe.
+Verknüpfung mit der neuen Website von Martens & Martens (hochzeitsfoto-rostock.de), damit sich beide Seiten bei Google und KI-Systemen gegenseitig stärken. Gearbeitet im Zweig `claude/verknuepfung-fotoseite`. Holger hat am 31.10.2026 alle neuen Sätze freigegeben und GO für den Livegang gegeben.
 
 ## Links zur Fotoseite (thematisch, Seite zu Seite)
 - Orts-Seiten mit eigener Location-Seite bei Martens & Martens verweisen dorthin, mit sprechendem Linktext („Hochzeitsfotos im … bei Martens & Martens“): Neptun, Kurhaus, Heiligendamm, Samow, Gerdshagen, Gamehl. Der bisherige Text „Einblicke in die Location“ ist ersetzt.
