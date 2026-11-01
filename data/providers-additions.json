@@ -96,30 +96,6 @@
     "detail": "anbieter-bride-stories.html"
   },
   {
-    "id": "wedding-loft",
-    "name": "The Wedding Loft",
-    "region": "Rostock",
-    "address": "Kröpeliner Straße 26, 18055 Rostock",
-    "phone": "",
-    "email": "info@wedding-loft.de",
-    "url": "https://www.wedding-loft.de/",
-    "services": [
-      "Outlet-Brautkleider",
-      "Anzüge und Maßanzüge",
-      "Trauringgestaltung",
-      "Direkt verfügbare Modelle"
-    ],
-    "profileText": "Der Store im Rostocker Hof kombiniert Outlet-Brautmode, Anzüge und Trauringe. Die Website nennt direkt mitnehmbare Modelle und private Beratungstermine. Verfügbare Größen und Bedingungen für die gewünschte Anprobe stehen im Buchungskalender.",
-    "category": "Brautmode",
-    "description": "Outlet-Brautkleider · Anzüge und Maßanzüge · Trauringgestaltung",
-    "kind": "editorial",
-    "checked": "2026-09-16",
-    "sources": [
-      "https://www.wedding-loft.de/"
-    ],
-    "detail": "anbieter-wedding-loft.html"
-  },
-  {
     "id": "seemannsbraut",
     "name": "Seemannsbraut",
     "region": "Weiteres Umland",
@@ -168,7 +144,7 @@
   },
   {
     "id": "blumenblock",
-    "name": "Blumenblock",
+    "name": "Blumen Block",
     "region": "Rostock",
     "address": "Satower Straße 74, 18059 Rostock",
     "phone": "0381 4005378",

@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/anbieter-wedding-loft.html", "destination": "/dienstleister.html", "permanent": true },
+    { "source": "/anbieter-wedding-loft", "destination": "/dienstleister.html", "permanent": true }
+  ]
+}

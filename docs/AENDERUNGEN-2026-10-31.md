@@ -20,3 +20,10 @@ Verknüpfung mit der neuen Website von Martens & Martens (hochzeitsfoto-rostock.
 
 ## Pflege
 - `docs/PFLEGE.md`: ab jetzt nur noch über GitHub, Generator auf dem Rechner nicht mehr benutzen.
+
+## Nachtrag 01.11.2026 (Wunsch Katrin, GO Holger)
+
+- „Blumenblock“ heißt jetzt „Blumen Block“ (Verzeichnis, Profilseite, Daten). Adresse `anbieter-blumenblock.html` bleibt.
+- „The Wedding Loft“ entfernt: Karte und Listeneintrag im Verzeichnis, Daten, Sitemap, Profilseite gelöscht. `vercel.json` leitet `/anbieter-wedding-loft.html` dauerhaft (301) auf `/dienstleister.html` weiter. Verzeichnis zeigt jetzt 12 Anbieter.
+- Die gleichen Änderungen sind auf hochzeitsfoto-rostock.de (/hochzeitsnetzwerk) umgesetzt.
+- Erst im Zweig `claude/hochzeitsfoto-rostock-relaunch-anz4lb`, live nach Holgers GO.
